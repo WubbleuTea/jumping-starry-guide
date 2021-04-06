@@ -44,7 +44,16 @@ BRIEF OVERVIEW OF THE JAVASCRIPT HISTORY
 1996 - Microsoft releases its own version in Internet Explorer.
 1996 - Javascript was submitted to European Computer Manufacturers Association (ECMA) for standardization.
 
-ECMAScript - A standards organization that evolves ECMAScript language then it is implemented by Browser Vendors.  
+ECMAScript - A standards organization that evolves ECMAScript language then it is implemented by Browser Vendors.  (not directly used because each browser makes its own JS engines which also implements certain features even if it is not standardized with ECMAScript).  Always under active development
 
-Javascript is the most famous ECMAScript implementations along with "actionScript" or JScript
+Javascript is the most famous ECMAScript implementations along with "actionScript" or JScript.  Always evolving language. 
+
+2015/2016 had a major overhaul.
+____________________________________________________________________________________________________________________________________________
+
+DEVELOPMENTAL ENVIRONMENT
+
+VSCode
+Goodgle Chrome
+
 ____________________________________________________________________________________________________________________________________________
