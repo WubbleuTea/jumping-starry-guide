@@ -1,0 +1,50 @@
+#01-Introduction
+____________________________________________________________________________________________________________________________________________
+JAVASCRIPT IS DYNAMIC AND WEAKLY TYPED
+
+Dynamic is parsed, compiled on the fly but exicuted at runtime, and is able to change at runtime.
+
+Weakly typed: Data types are assumed automatically, does not have to define variables are certain values like text or number, also not set in stone.
+
+____________________________________________________________________________________________________________________________________________
+
+JAVASCRIPT EXECUTES IN A HOSTED ENVIRONMENT
+
+Javascript was created to run in a browser to make dynamic webpages.
+Javascript can manipulate HTML, CSS, send background Http requests & much more
+However Javascript CAN'T access local filesystem(this would allow javascript to delete files!!!), interact with the operating system(OS) or much more for security reasons
+
+Google created a Javascript Engine V8 and can run Javascript everywhere. This is called Node.js
+Node.js can be executed on any machine and usually used to build web backends also known as serverside Javascript.
+Unlike Vanilla Javascript, Node.js can acess local filesystem, and interact with the operating system, etc.
+HOWEVER, Node.js CAN't manipulate HTML and CSS
+
+____________________________________________________________________________________________________________________________________________
+
+JAVASCRIPT VS JAVA 
+
+Totally independent languages besides name.
+
+Java works on server side not browser.
+Javascript works in the browser.
+
+Java is Object-oriented and strongly typed.
+
+Javascript is Flexible and weakly typed. Client side 
+
+Javascript was named to sound cool because Java was the language of the time.
+
+Syntax concepts and core features are exactly the same on client and server side.
+
+____________________________________________________________________________________________________________________________________________
+
+BRIEF OVERVIEW OF THE JAVASCRIPT HISTORY
+
+1995 - LiveScript is introduced by Netscape ( Would later be called JavaScript )
+1996 - Microsoft releases its own version in Internet Explorer.
+1996 - Javascript was submitted to European Computer Manufacturers Association (ECMA) for standardization.
+
+ECMAScript - A standards organization that evolves ECMAScript language then it is implemented by Browser Vendors.  
+
+Javascript is the most famous ECMAScript implementations along with "actionScript" or JScript
+____________________________________________________________________________________________________________________________________________
