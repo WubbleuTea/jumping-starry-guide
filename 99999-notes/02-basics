@@ -1,0 +1,19 @@
+____________________________________________________________________________________________________________________________________________
+
+VARIABLES AND CONSTANTS
+
+Variables are data containers or data storage
+
+Variable use let userName = 'Max' (let is used to introduce, then you name it [userName], then you define the term with numbers or strings or arrays etc)
+
+if you reassign a value to the variable you do not use let. 
+eg. userName = 'Manu' changes the vatiables value to Manu from Max
+
+Constants
+Constants are also data containers or data storage
+const totalUsers = 15.
+
+constants can not/must not be changed.
+constants help clean up your code as they never change and make code easier to follow.
+
+____________________________________________________________________________________________________________________________________________
