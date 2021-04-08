@@ -54,3 +54,17 @@ OPERATORS
 
 = (assignment) assigns a value to a variable
 ____________________________________________________________________________________________________________________________________________
+
+DATA TYPES
+
+Numbers 
+  important for calculations and code where you need to "work with numbers"
+  positive numbers (integer)
+  negative numbers (integer)
+  numbers with decimal point (floating point numbers or floats)
+
+Strings
+  Also known as text
+  important for outputting results and gathering input
+  must use '', "", `` to create a valid string
+____________________________________________________________________________________________________________________________________________
