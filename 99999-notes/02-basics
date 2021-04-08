@@ -16,4 +16,41 @@ const totalUsers = 15.
 constants can not/must not be changed.
 constants help clean up your code as they never change and make code easier to follow.
 
+
+____________________________________________________________________________________________________________________________________________
+
+VARIABLE NAMING
+
+JavaScript is case sensitive 
+
+Variable names must be desctiptive on how the data is being used. just calling a variable nameUserEntered does not tell what that name will be used for.
+
+Allowed naming conventions:
+
+camelCase (first word is lowercase, next words have no form of space and the first letters are uppercase like how I typed camel case).  
+
+Naming in camelCase can have digits => ageGroup5
+
+Also can use $ and _ in nameing (anywhere in the variable)
+
+Not Allowed/Bad nameing conventions:
+
+user_name (snake_case) Not best practice
+
+You can not start with a digit.
+
+no other special Characters are not allowed besides $ or _
+
+can not use keywords as variables like (let let)
+
+____________________________________________________________________________________________________________________________________________
+OPERATORS
+
++, -, *, / (mathmatical operators)
+
+% (modulus) divides two numbers and returns the remainder
+
+** (exponentation) 2 ** 3 = 8
+
+= (assignment) assigns a value to a variable
 ____________________________________________________________________________________________________________________________________________
