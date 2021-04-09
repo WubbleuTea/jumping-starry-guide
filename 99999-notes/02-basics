@@ -68,3 +68,10 @@ Strings
   important for outputting results and gathering input
   must use '', "", `` to create a valid string
 ____________________________________________________________________________________________________________________________________________
+
+HOW A SCRIPT GETS EXECUTED
+
+
+Code is parsed, compiled, and executed from top to bottom
+
+HTML is the same
