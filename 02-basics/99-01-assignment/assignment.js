@@ -1,12 +1,11 @@
+const originalResult = 18;
+let result = originalResult;
 let userNumInputAdd = 20;
 let userNumInputSubtract = 8;
 let userNumInputMultiply = 6;
 let userNumInputDivide = 2;
-const originalResult = 18;
-let result = originalResult;
 
 result = result + userNumInputAdd;
-
 result = result - userNumInputSubtract;
 result = result * userNumInputMultiply;
 result = result / userNumInputDivide;
