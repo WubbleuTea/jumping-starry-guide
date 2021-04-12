@@ -131,3 +131,21 @@ RETURNS
 Anything after a return does not work.
 You can return nothing by just putting return. (This can be used to cancel function execution)
 ____________________________________________________________________________________________________________________________________________
+
+CONVERTING DATA TYPES
+
+JavaScript always turns User input values to strings
+
+Can parseInt *whole numbers (you can also just put a + in front of the string)
+    parseFloat *decimal
+  on the string to turn it into a number.
+
+.toString() changes what is attached to a string.
+
+javascript will do basic operations besides addition between numbers and strings (unlike addition)
+3 * '3' => 9
+
+3 - '3' => 0
+
+3 / '3' => 1
+____________________________________________________________________________________________________________________________________________
