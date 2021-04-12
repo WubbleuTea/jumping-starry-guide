@@ -10,10 +10,10 @@ result = result - userNumInputSubtract;
 result = result * userNumInputMultiply;
 result = result / userNumInputDivide;
 
-window.alert(
+alert(
   `The User inputs were add: ${userNumInputAdd}, subract: ${userNumInputSubtract}, multiply: ${userNumInputMultiply}, divide: ${userNumInputDivide}`
 );
 
-window.alert(
+alert(
   `The Result: ${result} \n (${originalResult} + ${userNumInputAdd} - ${userNumInputSubtract}) * ${userNumInputMultiply} / ${userNumInputDivide}`
 );

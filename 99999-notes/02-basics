@@ -75,3 +75,30 @@ HOW A SCRIPT GETS EXECUTED
 Code is parsed, compiled, and executed from top to bottom
 
 HTML is the same
+
+____________________________________________________________________________________________________________________________________________
+
+INTRODUCING FUNCTIONS
+
+"Code on Demand"
+
+language construct in other programing languages
+
+1. define function 
+    function greetUser(name) {
+      alert('Hi ' + name);
+    }
+
+    function tells the script that this is a function
+    greetUser is the name of the function
+    name is a parameter (you dont have to use it)
+
+    This puts the code in "memory" it is not executed.
+
+2. Call function
+  use the function name and feed it parameters if needed
+    greetUser('Josh')
+
+  Every function execution then runs independent from other executions.
+  
+____________________________________________________________________________________________________________________________________________
