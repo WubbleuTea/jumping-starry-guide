@@ -2,6 +2,7 @@
 // let currentResult;
 const defaultResult = 0;
 let currentResult = defaultResult;
+let logEntries = [];
 
 // Get input from input field
 function getUserInputNumber() {
@@ -17,28 +18,30 @@ function createAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
 function add() {
   const enteredNumber = getUserInputNumber();
   const initialResult = currentResult;
-  currentResult = currentResult + enteredNumber;
+  currentResult += enteredNumber;
   createAndWriteOutput('+', initialResult, enteredNumber);
+  logEntries.push(enteredNumber);
+  console.log(logEntries[0]);
 }
 
 function subtract() {
   const enteredNumber = getUserInputNumber();
   const initialResult = currentResult;
-  currentResult = currentResult - enteredNumber;
+  currentResult -= enteredNumber;
   createAndWriteOutput('-', initialResult, enteredNumber);
 }
 
 function multiply() {
   const enteredNumber = getUserInputNumber();
   const initialResult = currentResult;
-  currentResult = currentResult * enteredNumber;
+  currentResult *= enteredNumber;
   createAndWriteOutput('*', initialResult, enteredNumber);
 }
 
 function divide() {
   const enteredNumber = getUserInputNumber();
   const initialResult = currentResult;
-  currentResult = currentResult / enteredNumber;
+  currentResult /= enteredNumber;
   createAndWriteOutput('/', initialResult, enteredNumber);
 }
 

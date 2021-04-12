@@ -149,3 +149,36 @@ javascript will do basic operations besides addition between numbers and strings
 
 3 / '3' => 1
 ____________________________________________________________________________________________________________________________________________
+
+OPERATORS
+
++=, -=, *=, /= takes the original value and does the operator with the value on the other side. ie. (currentResult *= enteredNumber; is the same as currentResult = currentResult * enteredNumber;)
+
+++result (returns the result after adding) 
+result++ (returns the result before adding)
+____________________________________________________________________________________________________________________________________________
+
+CORE DATA TYPES
+
+Numbers
+  integers(positive, negative)  floats(decimal)
+  important for calculations and code where you need to "work with a number"
+
+Strings(text)
+  '',"",``
+  Important for outputting results, gathering input
+
+Booleans 
+  true or false
+  important for conditional code and situations where you only have 2 options 
+
+Objects 
+  curly brace {}
+  {name:'Josh', age: 51}
+  Important for grouped/ related data, helps you with organized data.
+
+Arrays
+  square brackets []
+  [1,3,5]
+  Important for list data, unknown amounts of data.
+____________________________________________________________________________________________________________________________________________
