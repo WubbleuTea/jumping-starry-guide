@@ -100,5 +100,34 @@ language construct in other programing languages
     greetUser('Josh')
 
   Every function execution then runs independent from other executions.
-  
+
+____________________________________________________________________________________________________________________________________________
+
+CODE ORDER
+
+Variables must be initialized before used.
+
+Functions can be defined whereever in the script because they are hoisted by JS when it is called.
+____________________________________________________________________________________________________________________________________________
+
+
+GLOBAL Vs LOCAL SCOPE VARIABLES
+
+Global variables can be used anywhere
+
+local/block-scope vaiables can only be used in that function and not outside of them
+____________________________________________________________________________________________________________________________________________
+
+SHADOW VARIABLE
+
+You are able to use the same variable name on different levels 
+  One global, then reuse it on a local function
+  in different Functions
+You can not initialize variables in the same scope (both global or both in the same local function)
+____________________________________________________________________________________________________________________________________________
+
+RETURNS
+
+Anything after a return does not work.
+You can return nothing by just putting return. (This can be used to cancel function execution)
 ____________________________________________________________________________________________________________________________________________
