@@ -1,0 +1,204 @@
+____________________________________________________________________________________________________________________________________________
+
+VARIABLES AND CONSTANTS
+
+Variables are data containers or data storage
+
+Variable use let userName = 'Max' (let is used to introduce, then you name it [userName], then you define the term with numbers or strings or arrays etc)
+
+if you reassign a value to the variable you do not use let. 
+eg. userName = 'Manu' changes the vatiables value to Manu from Max
+
+Constants
+Constants are also data containers or data storage
+const totalUsers = 15.
+
+constants can not/must not be changed.
+constants help clean up your code as they never change and make code easier to follow.
+
+
+____________________________________________________________________________________________________________________________________________
+
+VARIABLE NAMING
+
+JavaScript is case sensitive 
+
+Variable names must be desctiptive on how the data is being used. just calling a variable nameUserEntered does not tell what that name will be used for.
+
+Allowed naming conventions:
+
+camelCase (first word is lowercase, next words have no form of space and the first letters are uppercase like how I typed camel case).  
+
+Naming in camelCase can have digits => ageGroup5
+
+Also can use $ and _ in nameing (anywhere in the variable)
+
+Not Allowed/Bad nameing conventions:
+
+user_name (snake_case) Not best practice
+
+You can not start with a digit.
+
+no other special Characters are not allowed besides $ or _
+
+can not use keywords as variables like (let let)
+
+____________________________________________________________________________________________________________________________________________
+OPERATORS
+
++, -, *, / (mathmatical operators)
+
+% (modulus) divides two numbers and returns the remainder
+
+** (exponentation) 2 ** 3 = 8
+
+= (assignment) assigns a value to a variable
+____________________________________________________________________________________________________________________________________________
+
+DATA TYPES
+
+Numbers 
+  important for calculations and code where you need to "work with numbers"
+  positive numbers (integer)
+  negative numbers (integer)
+  numbers with decimal point (floating point numbers or floats)
+
+Strings
+  Also known as text
+  important for outputting results and gathering input
+  must use '', "", `` to create a valid string
+____________________________________________________________________________________________________________________________________________
+
+HOW A SCRIPT GETS EXECUTED
+
+
+Code is parsed, compiled, and executed from top to bottom
+
+HTML is the same
+
+____________________________________________________________________________________________________________________________________________
+
+INTRODUCING FUNCTIONS
+
+"Code on Demand"
+
+language construct in other programing languages
+
+1. define function 
+    function greetUser(name) {
+      alert('Hi ' + name);
+    }
+
+    function tells the script that this is a function
+    greetUser is the name of the function
+    name is a parameter (you dont have to use it)
+
+    This puts the code in "memory" it is not executed.
+
+2. Call function
+  use the function name and feed it parameters if needed
+    greetUser('Josh')
+
+  Every function execution then runs independent from other executions.
+
+____________________________________________________________________________________________________________________________________________
+
+CODE ORDER
+
+Variables must be initialized before used.
+
+Functions can be defined whereever in the script because they are hoisted by JS when it is called.
+____________________________________________________________________________________________________________________________________________
+
+
+GLOBAL Vs LOCAL SCOPE VARIABLES
+
+Global variables can be used anywhere
+
+local/block-scope vaiables can only be used in that function and not outside of them
+____________________________________________________________________________________________________________________________________________
+
+SHADOW VARIABLE
+
+You are able to use the same variable name on different levels 
+  One global, then reuse it on a local function
+  in different Functions
+You can not initialize variables in the same scope (both global or both in the same local function)
+____________________________________________________________________________________________________________________________________________
+
+RETURNS
+
+Anything after a return does not work.
+You can return nothing by just putting return. (This can be used to cancel function execution)
+____________________________________________________________________________________________________________________________________________
+
+CONVERTING DATA TYPES
+
+JavaScript always turns User input values to strings
+
+Can parseInt *whole numbers (you can also just put a + in front of the string)
+    parseFloat *decimal
+  on the string to turn it into a number.
+
+.toString() changes what is attached to a string.
+
+javascript will do basic operations besides addition between numbers and strings (unlike addition)
+3 * '3' => 9
+
+3 - '3' => 0
+
+3 / '3' => 1
+____________________________________________________________________________________________________________________________________________
+
+OPERATORS
+
++=, -=, *=, /= takes the original value and does the operator with the value on the other side. ie. (currentResult *= enteredNumber; is the same as currentResult = currentResult * enteredNumber;)
+
+++result (returns the result after adding) 
+result++ (returns the result before adding)
+____________________________________________________________________________________________________________________________________________
+
+CORE DATA TYPES
+
+Numbers
+  integers(positive, negative)  floats(decimal)
+  important for calculations and code where you need to "work with a number"
+
+Strings(text)
+  '',"",``
+  Important for outputting results, gathering input
+
+Booleans 
+  true or false
+  important for conditional code and situations where you only have 2 options 
+
+Objects 
+  curly brace {}
+  {name:'Josh', age: 51}
+  Important for grouped/ related data, helps you with organized data.
+
+Arrays
+  square brackets []
+  [1,3,5]
+  Important for list data, unknown amounts of data.
+____________________________________________________________________________________________________________________________________________
+
+NULL/UNDEFINED/ NaN
+
+undefined 
+  Default value of uninitialized variables.
+  Never assign undefined as a value manually.
+
+null 
+  Never assumed by Default 
+  You can assign this a value if you want to "reset"/"clear" a variable
+
+undefined and null are not entirely equal.  
+
+NaN
+  Not a Number
+  Not a type 
+  Technically, it's of type number and can therefore be used in calculations.
+  Like an error code (running a operation with a non-number)
+  It yields a new NaN and it's the result of incalid calculations (3*'woah')
+____________________________________________________________________________________________________________________________________________
