@@ -182,3 +182,23 @@ Arrays
   [1,3,5]
   Important for list data, unknown amounts of data.
 ____________________________________________________________________________________________________________________________________________
+
+NULL/UNDEFINED/ NaN
+
+undefined 
+  Default value of uninitialized variables.
+  Never assign undefined as a value manually.
+
+null 
+  Never assumed by Default 
+  You can assign this a value if you want to "reset"/"clear" a variable
+
+undefined and null are not entirely equal.  
+
+NaN
+  Not a Number
+  Not a type 
+  Technically, it's of type number and can therefore be used in calculations.
+  Like an error code (running a operation with a non-number)
+  It yields a new NaN and it's the result of incalid calculations (3*'woah')
+____________________________________________________________________________________________________________________________________________
