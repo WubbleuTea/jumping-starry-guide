@@ -68,3 +68,20 @@ See these examples:
 'a' > 'B' // true
 'a' > 'b' // false
 ____________________________________________________________________________________________________________________________________________
+
+BEWARE WHEN COMPARING OBJECTS AND ARRAYS FOR EQUALITY 
+
+Objects and Arrays do not equal true if you just compare them.  
+
+if you assign an object 
+const person1 = {name: 'Josh'}
+const person2 = {name: 'Josh'}
+const person3 = person1
+
+person1 === person2 -false
+person1 == person2 -false
+person3 === person1 -true
+
+This works the same with arrays
+
+____________________________________________________________________________________________________________________________________________
