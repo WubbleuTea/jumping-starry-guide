@@ -10,6 +10,13 @@ let hasBonusLife = true;
 
 adjustHealthBars(chosenMaxLife);
 
+function reset() {
+  currentMonsterHealth = chosenMaxLife;
+  currentPlayerHealth = chosenMaxLife;
+  // Bonus life only exists once (can add functionality for that)
+  resetGame(chosenMaxLife);
+}
+
 function endRound() {
   const initialPlayerHealth = currentPlayerHealth;
   const playerDamage = dealPlayerDamage(MONSTER_ATTACK_VALUE);
@@ -29,6 +36,13 @@ function endRound() {
     alert('You Lost');
   } else if (currentPlayerHealth <= 0 || currentMonsterHealth <= 0) {
     alert('This battle is a draw');
+  }
+
+  if (currentPlayerHealth <= 0 || currentMonsterHealth <= 0) {
+    alert(
+      'Game is reseting! If you used your BONUS LIFE at any time that will not reset'
+    );
+    reset();
   }
 }
 
