@@ -85,3 +85,21 @@ person3 === person1 -true
 This works the same with arrays
 
 ____________________________________________________________________________________________________________________________________________
+
+CONDITIONAL EXPRESSIONS / TERNARY OPERATOR 
+
+This will not work:
+
+    const userName = if (isLogin) {
+        return 'Max';
+    } else {
+        return null;
+    }
+
+So use a ternary operator:
+
+    const userName = isLogin ? 'Max' : null
+            isLogin is the condition can can be written exactly like an if statement
+            first item after the question mark is the conditions return for true or truthy statement
+            the part after the colon is the return is the conditions return for false or falsy statement.
+____________________________________________________________________________________________________________________________________________
