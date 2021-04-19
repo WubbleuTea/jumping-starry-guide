@@ -100,6 +100,20 @@ So use a ternary operator:
 
     const userName = isLogin ? 'Max' : null
             isLogin is the condition can can be written exactly like an if statement
-            first item after the question mark is the conditions return for true or truthy statement
-            the part after the colon is the return is the conditions return for false or falsy statement.
+            first item after the question mark is the condition's return for true or truthy statement
+            the part after the colon is the return is the condition's return for false or falsy statement.
+____________________________________________________________________________________________________________________________________________
+
+EXPRESSION VS STATEMENT 
+
+Expression 
+    Something that yields a value that can be stored in a const, var, return in a function
+    Every expression is a statement
+    can be used on the right side of an EQUAL sign
+
+Statement
+    Statments are not all expressions.
+    You can not use statements (like if)
+    Statements that are not expressions can not be used on the right side of an EQUAL sign.
+
 ____________________________________________________________________________________________________________________________________________
