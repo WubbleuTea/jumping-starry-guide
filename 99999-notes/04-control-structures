@@ -162,7 +162,31 @@ const userName = enteredValue || 'PLACEHOLDER'; // will assign 'PLACEHOLDER' if 
 
 ____________________________________________________________________________________________________________________________________________
 
+INTRODUCING LOOPS
 
+USED to execute code multiple times
 
+for loop 
+    Execute code a certain amount of times (with counter variable.)
+        for (let i = 0; i < 3; i++) {
+            console.log(i)
+        }
+            "let i = 0" - begin 
+            "i < 3" - exit condition
+            "i++" - code that runs after every code execution
+for-of loop
+    Executes for every element in an array 
+        for (const el of array) {
+            console.log(el)
+        }
+            "const el of array" - gives you access to one element of an array at a time
+for-in loop
+    Executes for every key in an object 
+        for (const key in obj) {
+            console.log(key)
+            console.log(obj[key])
+        }
+            "const key in obj" - gives you acces to one key in an object (key incriments like accessing an array obj[key])
+while loop
 
 ____________________________________________________________________________________________________________________________________________
