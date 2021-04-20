@@ -28,54 +28,104 @@ adjustHealthBars(chosenMaxLife);
 
 function writeToLog(ev, val, monsterHealth, playerHealth) {
   // maybe include what game you are on
-  let logEntry;
+  let logEntry = {
+    event: ev,
+    value: val,
+    finalMonsterHealth: monsterHealth,
+    finalPlayerHealth: playerHealth
+  };
 
-  if (ev === LOG_EVENT_PLAYER_ATTACK) {
-    logEntry = {
-      event: ev,
-      value: val,
-      target: 'MONSTER',
-      finalMonsterHealth: monsterHealth,
-      finalPlayerHealth: playerHealth
-    };
-  } else if (ev === LOG_EVENT_PLAYER_STRONG_ATTACK) {
-    logEntry = {
-      event: ev,
-      value: val,
-      target: 'MONSTER',
-      finalMonsterHealth: monsterHealth,
-      finalPlayerHealth: playerHealth
-    };
-  } else if (ev === LOG_EVENT_MONSTER_ATTACK) {
-    logEntry = {
-      event: ev,
-      value: val,
-      target: 'PLAYER',
-      finalMonsterHealth: monsterHealth,
-      finalPlayerHealth: playerHealth
-    };
-  } else if (ev === LOG_EVENT_PLAYER_HEAL) {
-    logEntry = {
-      event: ev,
-      value: val,
-      target: 'PLAYER',
-      finalMonsterHealth: monsterHealth,
-      finalPlayerHealth: playerHealth
-    };
-  } else if (ev === LOG_EVENT_GAME_OVER) {
-    logEntry = {
-      event: ev,
-      value: val,
-      target: 'NONE - GAME IS OVER',
-      finalMonsterHealth: monsterHealth,
-      finalPlayerHealth: playerHealth
-    };
-  } else {
-    return;
+  switch (ev) {
+    case LOG_EVENT_PLAYER_ATTACK:
+      logEntry.target = 'MONSTER';
+      break;
+    case LOG_EVENT_PLAYER_STRONG_ATTACK:
+      logEntry = {
+        event: ev,
+        value: val,
+        target: 'MONSTER',
+        finalMonsterHealth: monsterHealth,
+        finalPlayerHealth: playerHealth
+      };
+      break;
+    case LOG_EVENT_MONSTER_ATTACK:
+      logEntry = {
+        event: ev,
+        value: val,
+        target: 'PLAYER',
+        finalMonsterHealth: monsterHealth,
+        finalPlayerHealth: playerHealth
+      };
+      break;
+    case LOG_EVENT_PLAYER_HEAL:
+      logEntry = {
+        event: ev,
+        value: val,
+        target: 'PLAYER',
+        finalMonsterHealth: monsterHealth,
+        finalPlayerHealth: playerHealth
+      };
+      break;
+    case LOG_EVENT_GAME_OVER:
+      logEntry = {
+        event: ev,
+        value: val,
+        target: 'NONE - GAME IS OVER',
+        finalMonsterHealth: monsterHealth,
+        finalPlayerHealth: playerHealth
+      };
+      break;
+    default:
+      logEntry = {};
+      return;
   }
+
   battleLog.push(logEntry);
 }
 
+// if (ev === LOG_EVENT_PLAYER_ATTACK) {
+//   logEntry = {
+//     event: ev,
+//     value: val,
+//     target: 'MONSTER',
+//     finalMonsterHealth: monsterHealth,
+//     finalPlayerHealth: playerHealth
+//   };
+// } else if (ev === LOG_EVENT_PLAYER_STRONG_ATTACK) {
+//   logEntry = {
+//     event: ev,
+//     value: val,
+//     target: 'MONSTER',
+//     finalMonsterHealth: monsterHealth,
+//     finalPlayerHealth: playerHealth
+//   };
+// } else if (ev === LOG_EVENT_MONSTER_ATTACK) {
+//   logEntry = {
+//     event: ev,
+//     value: val,
+//     target: 'PLAYER',
+//     finalMonsterHealth: monsterHealth,
+//     finalPlayerHealth: playerHealth
+//   };
+// } else if (ev === LOG_EVENT_PLAYER_HEAL) {
+//   logEntry = {
+//     event: ev,
+//     value: val,
+//     target: 'PLAYER',
+//     finalMonsterHealth: monsterHealth,
+//     finalPlayerHealth: playerHealth
+//   };
+// } else if (ev === LOG_EVENT_GAME_OVER) {
+//   logEntry = {
+//     event: ev,
+//     value: val,
+//     target: 'NONE - GAME IS OVER',
+//     finalMonsterHealth: monsterHealth,
+//     finalPlayerHealth: playerHealth
+//   };
+// } else {
+//   return;
+// }
 // ALSO A VALID WAY TO SET THE LOG ENTRIES.
 // the .target adds to the object instead of trying to create the entire object in many different if statements.
 // function writeToLog(ev, val, monsterHealth, playerHealth) {

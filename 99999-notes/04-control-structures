@@ -161,3 +161,8 @@ const enteredValue = ''; // let's assume this is set based on some input provide
 const userName = enteredValue || 'PLACEHOLDER'; // will assign 'PLACEHOLDER' if enteredValue is an empty string
 
 ____________________________________________________________________________________________________________________________________________
+
+
+
+
+____________________________________________________________________________________________________________________________________________
