@@ -272,14 +272,22 @@ function printLogHandler() {
   //   console.log('----------')
   // }
 
-  //for loop using length of array/object
+  //for loop using length of array/object (gives you access to index)
   // for (let i = 0; i < battleLog.length; i++) {
   //   console.log(battleLog[i]);
   // }
 
-  // for-of loop
+  // for-of loop (no access to index)
+  // index can be created outside of for-of loop
+  let i = 0;
   for (const logEntry of battleLog) {
-    console.log(logEntry);
+    console.log(`#${i}`);
+    // for-in loop
+    for (const key in logEntry) {
+      //the bracket is grabing the value of the key
+      console.log(`${key} => ${logEntry[key]}`);
+    }
+    i++;
   }
   console.log(battleLog);
 }
