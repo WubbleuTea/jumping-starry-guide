@@ -188,5 +188,9 @@ for-in loop
         }
             "const key in obj" - gives you acces to one key in an object (key incriments like accessing an array obj[key])
 while loop
-
+    Execute code as long as a condition is true 
+        while (isLoggedIn) {
+            .....
+        }
+    
 ____________________________________________________________________________________________________________________________________________

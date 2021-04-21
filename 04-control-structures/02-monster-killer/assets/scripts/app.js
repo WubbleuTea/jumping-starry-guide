@@ -261,6 +261,26 @@ function healPlayerHandler() {
 }
 
 function printLogHandler() {
+  // decrement in the {}
+  // for (let i =10; i > 0;) {
+  //   i--;
+  //   console.log(i)
+  // }
+
+  // normal for loop
+  // for (let i = 0; i < 3; i++) {
+  //   console.log('----------')
+  // }
+
+  //for loop using length of array/object
+  // for (let i = 0; i < battleLog.length; i++) {
+  //   console.log(battleLog[i]);
+  // }
+
+  // for-of loop
+  for (const logEntry of battleLog) {
+    console.log(logEntry);
+  }
   console.log(battleLog);
 }
 
