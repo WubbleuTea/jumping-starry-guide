@@ -15,6 +15,7 @@ const enteredValue = prompt('Maximum life for you and the monster.', '100');
 
 let chosenMaxLife = parseInt(enteredValue);
 let battleLog = [];
+let lastLoggedEntry;
 
 if (isNaN(chosenMaxLife) || chosenMaxLife <= 0) {
   chosenMaxLife = 100;
@@ -274,11 +275,12 @@ function printLogHandler() {
   // }
 
   // do-while
-  let j = 0;
-  do {
-    console.log(j);
-    j++;
-  } while (j < 3);
+  // let j = 0;
+  // do {
+  //   console.log(j);
+  //   j++;
+  // } while (j < 3);
+
   // normal for loop
   // for (let i = 0; i < 3; i++) {
   //   console.log('----------')
@@ -293,11 +295,15 @@ function printLogHandler() {
   // index can be created outside of for-of loop
   let i = 0;
   for (const logEntry of battleLog) {
-    console.log(`#${i}`);
-    // for-in loop
-    for (const key in logEntry) {
-      //the bracket is grabing the value of the key
-      console.log(`${key} => ${logEntry[key]}`);
+    if ((!lastLoggedEntry && lastLoggedEntry !== 0) || lastLoggedEntry < i) {
+      console.log(`#${i}`);
+      // for-in loop
+      for (const key in logEntry) {
+        //the bracket is grabing the value of the key
+        console.log(`${key} => ${logEntry[key]}`);
+      }
+      lastLoggedEntry = i;
+      break;
     }
     i++;
   }
