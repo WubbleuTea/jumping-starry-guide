@@ -275,11 +275,20 @@ function printLogHandler() {
   // }
 
   // do-while
-  // let j = 0;
-  // do {
-  //   console.log(j);
-  //   j++;
-  // } while (j < 3);
+  // also Labeled expression
+  let j = 0;
+  outerWhile: do {
+    console.log('Outer', j);
+    innerFor: for (let k = 0; k < 5; k++) {
+      //lets us break the outer do-while loop within the inner loop
+      if (k === 3) {
+        break outerWhile;
+        // continue outerWhile //creates an infinite loop because we are not going to j++
+      }
+      console.log('Inner', k);
+    }
+    j++;
+  } while (j < 3);
 
   // normal for loop
   // for (let i = 0; i < 3; i++) {
