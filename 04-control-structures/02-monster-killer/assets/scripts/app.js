@@ -267,6 +267,18 @@ function printLogHandler() {
   //   console.log(i)
   // }
 
+  // while loop
+  // let j = 0;
+  // while (j < 3) {
+  //   console.log('-----------')
+  // }
+
+  // do-while
+  let j = 0;
+  do {
+    console.log(j);
+    j++;
+  } while (j < 3);
   // normal for loop
   // for (let i = 0; i < 3; i++) {
   //   console.log('----------')
