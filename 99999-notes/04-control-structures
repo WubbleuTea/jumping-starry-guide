@@ -194,3 +194,34 @@ while loop
         }
     
 ____________________________________________________________________________________________________________________________________________
+
+BREAK VS CONTINUE
+
+BREAK   
+    This will stop the code all together
+for (let i = 0; i < 5; i++) {
+    if (i === 3) {
+        break;
+    }
+    console.log(i)
+}
+    PRINTS:
+    0
+    1
+    2
+
+CONTINUE
+    Continues the function but skips that iteration.
+for (let i = 0; i < 5; i++) {
+    if (i === 3) {
+        continue;
+    }
+    console.log(i)
+}
+
+    PRINTS:
+    0
+    1
+    2
+    4
+____________________________________________________________________________________________________________________________________________
