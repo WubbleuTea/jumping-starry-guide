@@ -1,0 +1,238 @@
+____________________________________________________________________________________________________________________________________________
+
+INTRODUCING "IF" STATEMENTS & BOOLEAN (COMPARISON) OPERATORS
+
+If statements require conditions (returns true or false)
+  == (double equal sign) checks for value equality
+  != checks for value inequality
+  === or !== checks for value and type (in)equality () *** prefers this
+  > or < check for value being greater or lesser
+  >= or <= check for value being (greater or equal) or (lesser or equal)
+  ! checks if NOT true
+
+Using Booleans in Conditions & More on Text Comparisons
+Understanding the "Condition"
+Always keep in mind that condition in
+
+if (condition) { ... }
+simply has to be a boolean value.
+
+Often, you'll generate such a boolean value with the help of ===, >, < etc. All these operators yield boolean values (without changing the variables/ values you're using them on).
+
+Since if only wants a boolean, you of course don't have to use such an operator. If you already got a variable that holds a boolean, you can use it without any extra operator.
+
+Example:
+
+const isLoggedIn = true;
+if (isLoggedIn) {
+    // This code will execute because isLoggedIn is true => A valid condition
+}
+You could write
+
+const isLoggedIn = true;
+if (isLoggedIn === true) {
+    ...
+}
+but that would be redundant. You'd generate another new boolean where you already got one.
+
+You can use the ! operator to negate ("invert") the value:
+
+const isLoggedIn = true;
+if (!isLoggedIn) {
+    // This code will NOT execute because isLoggedIn is true but ! inverts it (in this check)
+} else {
+    // This would execute because !isLoggedIn yields false => else block executes
+}
+Again, that would be similar to:
+
+const isLoggedIn = true;
+if (isLoggedIn !== true) {
+    // This would NOT execute
+} else {
+    // This would execute because isLoggedIn is true and hence !== true yields false
+}
+But again, that would be redundant.
+
+More on Text (String) Comparisons
+Strings can also be compared with greater than (>) or lower/ smaller than (<) operators.
+
+JavaScript compares strings based on standard lexicographical ordering, using Unicode values.
+
+That means that b is greater than a for example.
+
+JavaScript always looks at the first character and only considers other characters if the first character is similar. In addition, capital characters are considered to be smaller than lowercase characters.
+
+See these examples:
+
+'ab' > 'aa' // true
+'a' > 'B' // true
+'a' > 'b' // false
+____________________________________________________________________________________________________________________________________________
+
+BEWARE WHEN COMPARING OBJECTS AND ARRAYS FOR EQUALITY 
+
+Objects and Arrays do not equal true if you just compare them.  
+
+if you assign an object 
+const person1 = {name: 'Josh'}
+const person2 = {name: 'Josh'}
+const person3 = person1
+
+person1 === person2 -false
+person1 == person2 -false
+person3 === person1 -true
+
+This works the same with arrays
+
+____________________________________________________________________________________________________________________________________________
+
+CONDITIONAL EXPRESSIONS / TERNARY OPERATOR 
+
+This will not work:
+
+    const userName = if (isLogin) {
+        return 'Max';
+    } else {
+        return null;
+    }
+
+So use a ternary operator:
+
+    const userName = isLogin ? 'Max' : null
+            isLogin is the condition can can be written exactly like an if statement
+            first item after the question mark is the condition's return for true or truthy statement
+            the part after the colon is the return is the condition's return for false or falsy statement.
+____________________________________________________________________________________________________________________________________________
+
+EXPRESSION VS STATEMENT 
+
+Expression 
+    Something that yields a value that can be stored in a const, var, return in a function
+    Every expression is a statement
+    can be used on the right side of an EQUAL sign
+
+Statement
+    Statments are not all expressions.
+    You can not use statements (like if)
+    Statements that are not expressions can not be used on the right side of an EQUAL sign.
+
+____________________________________________________________________________________________________________________________________________
+
+"BOOLEAN TRICKS" WITH LOGICAL OPERATORS
+
+Boolean Coercion via double not (DOUBLE BANG) operator = !! 
+    turns statements into actual false values and not falsey value
+    !!"" = false
+    !!1 = true
+Default value assignment via OR operator = ||
+    example: const name = someInput || 'Josh'
+        If someInput is false (has no value) it will check the thing after the or operator and use that if it is truthy
+    OR returns the first truthy value
+Use value if condition is true via AND operator = &&
+    EXAMPLE: const name = isLoggedIn && 'Josh' 
+        Josh is set if isLoggedIn is true, false otherwise.
+
+____________________________________________________________________________________________________________________________________________
+
+Logical Operators - A Quick Summary
+As a reference which you can come back to (or print out), here's a quick summary of how logical operators and comparison operators behave in JavaScript:
+
+const userName = 'Max';
+const altName = '';
+console.log(userName === 'Max'); // generates and prints a boolean => true
+console.log(userName); // wasn't touched, still is a string => 'Max'
+ 
+console.log(userName || null); // userName is truthy and therefore returned by || => 'Max'
+console.log(altName || 'Max'); // altName is falsy (empty string), hence 'Max' is returned => 'Max'
+console.log(altName || ''); // both altName and '' are falsy but if the first operand is falsy, the second one is always returned => ''
+console.log(altName || null || 'Anna'); // altName and null are falsy, 'Anna' is returned => 'Anna'
+ 
+console.log(userName && 'Anna'); // userName is truthy, hence second (!) value is returned => 'Anna'
+console.log(altName && 'Anna'); // altName is falsy, hence first value is returned => ''
+console.log(userName && ''); // userName is truthy, hence second value is returned => ''
+Always keep in mind: NO operator (neither ===, > etc. nor && or ||) changes the variable you might be using in the comparison. In the above examples, the values stored in userName and altName are NEVER changed.
+
+===, > etc. just generate new boolean values which are used in the comparison. || and && generate NO booleans, they just treat the values before and after them as conditions (which therefore need to yield boolean values and are coerced to booleans if required).
+
+Because of the above-described behaviors, you often use || in JavaScript to assign default/ fallback values to variables/ constants:
+
+const enteredValue = ''; // let's assume this is set based on some input provided by the user, therefore it might be an empty string
+ 
+const userName = enteredValue || 'PLACEHOLDER'; // will assign 'PLACEHOLDER' if enteredValue is an empty string
+
+____________________________________________________________________________________________________________________________________________
+
+INTRODUCING LOOPS
+
+USED to execute code multiple times
+
+for loop 
+    Execute code a certain amount of times (with counter variable.)
+        for (let i = 0; i < 3; i++) {
+            console.log(i)
+        }
+            "let i = 0" - begin 
+            "i < 3" - exit condition
+            "i++" - code that runs after every code execution
+for-of loop
+    Executes for every element in an array 
+        for (const el of array) {
+            console.log(el)
+        }
+            "const el of array" - gives you access to one element of an array at a time
+for-in loop
+    Executes for every key in an object 
+        for (const key in obj) {
+            console.log(key)
+            console.log(obj[key])
+        }
+            "const key in obj" - gives you acces to one key in an object (key incriments like accessing an array obj[key])
+while loop
+    Execute code as long as a condition is true 
+        while (isLoggedIn) {
+            .....
+        }
+    
+____________________________________________________________________________________________________________________________________________
+
+BREAK VS CONTINUE
+
+BREAK   
+    This will stop the code all together
+for (let i = 0; i < 5; i++) {
+    if (i === 3) {
+        break;
+    }
+    console.log(i)
+}
+    PRINTS:
+    0
+    1
+    2
+
+CONTINUE
+    Continues the function but skips that iteration.
+for (let i = 0; i < 5; i++) {
+    if (i === 3) {
+        continue;
+    }
+    console.log(i)
+}
+
+    PRINTS:
+    0
+    1
+    2
+    4
+____________________________________________________________________________________________________________________________________________
+
+ERROR HANDLING
+
+User Input ERROR
+    e.g. user enters text like 'hi' instead of a number
+
+Network Errors
+    e.g. server is offline
+
+can use TRY/CATCH to throw custom errors
+____________________________________________________________________________________________________________________________________________
