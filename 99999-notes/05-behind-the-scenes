@@ -13,5 +13,48 @@ ES6 (and newer,also known as ES2015)
   Browsers automatically update.
   Many nre features that help us write cleaner, better and faster code.
   Still under active develoopment, but ES6 was a big step forward.
-  
+
 ____________________________________________________________________________________________________________________________________________
+
+VAR VS LET VS CONST 
+
+VAR:
+  Creates a variable
+  avalible forever
+  Function & Global scope
+LET:
+  Creates a variable
+  Only avalible since ES6
+  Block Scope
+CONST:
+  creates a constant
+  Only avalible since ES6
+  Block Scope
+
+
+____________________________________________________________________________________________________________________________________________
+
+STRICT MODE 
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode#changes_in_strict_mode
+
+____________________________________________________________________________________________________________________________________________
+
+JAVASCRIPT ENGINES AND WHAT THEY DO 
+
+1. You write your code
+
+2-A.Then the browser executes the script 
+  JavaScript parsing and executes code (Interpreter and Compiler)
+    Interpreter: load script, reads it, translates it to bytecode, then runs the script
+    Compiler (JiT): turns bytecode from interpreter into machine code
+      THESE HAPPEN SIDE BY SIDE
+
+2-B. Browser APIs 
+  Communication bridges between Javascript and (C++) logic built into the browser.
+
+3. Then the compiled machine code goes to your computer  
+
+
+____________________________________________________________________________________________________________________________________________
+
