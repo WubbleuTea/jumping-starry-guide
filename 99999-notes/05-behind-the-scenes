@@ -1,0 +1,17 @@
+____________________________________________________________________________________________________________________________________________
+
+ES5 VS ES6
+
+ECMA script (ES)
+
+ES5 (and older)
+  Supported in basically all browser including old Internet Explorer
+  Only had var for variables (not let and const)
+  Generally uses the same syntax as ES6 but quite some missing features
+ES6 (and newer,also known as ES2015)
+  Supported in modern browser can mostly be transpiled to ES5
+  Browsers automatically update.
+  Many nre features that help us write cleaner, better and faster code.
+  Still under active develoopment, but ES6 was a big step forward.
+  
+____________________________________________________________________________________________________________________________________________
