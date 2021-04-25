@@ -58,3 +58,48 @@ JAVASCRIPT ENGINES AND WHAT THEY DO
 
 ____________________________________________________________________________________________________________________________________________
 
+HOW CODE GETS EXECUTED
+
+JAVASCRIPT  
+  Single-threaded "One thing happens at a time"
+
+HEAP
+  Long term memory
+  Memory allocation- stores data in your system memory and manages access to it.
+STACK
+  Short term memory
+  Execution Context- manages your program flow(function calls and communication)
+____________________________________________________________________________________________________________________________________________
+
+PRIMITIVE VS REFERENCE TYPES
+
+Two Categories of Types/Values in JavaScript
+
+  Primitive Values
+    Types:
+      Strings, numbers, Booleans, null, undefined, Symbol
+    Stored in memory (normally on Stack), variable stores value itself
+    Copying a variable (=assign to different variable) copies the value (This happens at assignment and does not change even if you adjust the copied value)
+        e.g. let userName = 'Josh'
+              let anotherUserName = userName
+              userName = 'Jane'
+              anotherUserName will still = 'Josh'
+
+  Reference Values
+    All other objects (usually more expensive to create)
+      name.length is an example (dot notation)
+    Stored in memory (Heap), variable stores a pointer (address) to location in memory
+    Copying a variable (= assign to different variable) copies the pointer/reference)
+        let hobbies = ['Sports]
+        let newHobbies = hobbies
+          hobbies prints ['Sports']
+          newHobbies prints ['Sports']
+        hobbies.push('Cooking')
+          hobbies prints ['Sports', 'Cooking']
+          newHobbies prints ['Sports', 'Cooking']
+
+
+
+____________________________________________________________________________________________________________________________________________
+
+
