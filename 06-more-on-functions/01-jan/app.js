@@ -1,10 +1,16 @@
 const startGameBtn = document.getElementById('start-game-btn');
 
-function startGame() {
+const start = function () {
   console.log('Game is starting...');
-}
+};
 
-startGameBtn.addEventListener('click', startGame);
+startGameBtn.addEventListener('click', start);
+
+// function startGame() {
+//   console.log('Game is starting...');
+// }
+
+// startGameBtn.addEventListener('click', startGame);
 
 // Functions in objects are called methods.
 // const person = {
@@ -15,3 +21,5 @@ startGameBtn.addEventListener('click', startGame);
 // };
 
 // person.greet();
+
+console.dir(start);
