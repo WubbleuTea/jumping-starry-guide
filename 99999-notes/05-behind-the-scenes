@@ -97,9 +97,32 @@ Two Categories of Types/Values in JavaScript
         hobbies.push('Cooking')
           hobbies prints ['Sports', 'Cooking']
           newHobbies prints ['Sports', 'Cooking']
+        (You could have pushed to newHobbies and it would change hobbies)
+
+    Way to make another object that will contain seperate data from the original
+      let person = {age: 30}
+      let anotherPerson = person 
+      anotherPerson.age = 32
+        person will pring {age: 32}
+      // this is how you create a new One
+      let yetAnotherPerson = { ...person }
+
+      ... = spread operator
+        pulls out all the key value pairs and adds them as new key value pairs to this new object
 
 
 
 ____________________________________________________________________________________________________________________________________________
 
 
+GARBAGE COLLECTION
+
+How is Heap memory managed?
+  Garbage Collector
+    Periodically checks Heap for unused objects (objects without references)
+    removes unused objects (like setting something to null)
+  
+  Beware of Memory Leaks:
+    Unused objects, where you still hold references to  
+
+____________________________________________________________________________________________________________________________________________
