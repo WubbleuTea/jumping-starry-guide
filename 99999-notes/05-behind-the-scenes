@@ -1,0 +1,128 @@
+____________________________________________________________________________________________________________________________________________
+
+ES5 VS ES6
+
+ECMA script (ES)
+
+ES5 (and older)
+  Supported in basically all browser including old Internet Explorer
+  Only had var for variables (not let and const)
+  Generally uses the same syntax as ES6 but quite some missing features
+ES6 (and newer,also known as ES2015)
+  Supported in modern browser can mostly be transpiled to ES5
+  Browsers automatically update.
+  Many nre features that help us write cleaner, better and faster code.
+  Still under active develoopment, but ES6 was a big step forward.
+
+____________________________________________________________________________________________________________________________________________
+
+VAR VS LET VS CONST 
+
+VAR:
+  Creates a variable
+  avalible forever
+  Function & Global scope
+LET:
+  Creates a variable
+  Only avalible since ES6
+  Block Scope
+CONST:
+  creates a constant
+  Only avalible since ES6
+  Block Scope
+
+
+____________________________________________________________________________________________________________________________________________
+
+STRICT MODE 
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode#changes_in_strict_mode
+
+____________________________________________________________________________________________________________________________________________
+
+JAVASCRIPT ENGINES AND WHAT THEY DO 
+
+1. You write your code
+
+2-A.Then the browser executes the script 
+  JavaScript parsing and executes code (Interpreter and Compiler)
+    Interpreter: load script, reads it, translates it to bytecode, then runs the script
+    Compiler (JiT): turns bytecode from interpreter into machine code
+      THESE HAPPEN SIDE BY SIDE
+
+2-B. Browser APIs 
+  Communication bridges between Javascript and (C++) logic built into the browser.
+
+3. Then the compiled machine code goes to your computer  
+
+
+____________________________________________________________________________________________________________________________________________
+
+HOW CODE GETS EXECUTED
+
+JAVASCRIPT  
+  Single-threaded "One thing happens at a time"
+
+HEAP
+  Long term memory
+  Memory allocation- stores data in your system memory and manages access to it.
+STACK
+  Short term memory
+  Execution Context- manages your program flow(function calls and communication)
+____________________________________________________________________________________________________________________________________________
+
+PRIMITIVE VS REFERENCE TYPES
+
+Two Categories of Types/Values in JavaScript
+
+  Primitive Values
+    Types:
+      Strings, numbers, Booleans, null, undefined, Symbol
+    Stored in memory (normally on Stack), variable stores value itself
+    Copying a variable (=assign to different variable) copies the value (This happens at assignment and does not change even if you adjust the copied value)
+        e.g. let userName = 'Josh'
+              let anotherUserName = userName
+              userName = 'Jane'
+              anotherUserName will still = 'Josh'
+
+  Reference Values
+    All other objects (usually more expensive to create)
+      name.length is an example (dot notation)
+    Stored in memory (Heap), variable stores a pointer (address) to location in memory
+    Copying a variable (= assign to different variable) copies the pointer/reference)
+        let hobbies = ['Sports]
+        let newHobbies = hobbies
+          hobbies prints ['Sports']
+          newHobbies prints ['Sports']
+        hobbies.push('Cooking')
+          hobbies prints ['Sports', 'Cooking']
+          newHobbies prints ['Sports', 'Cooking']
+        (You could have pushed to newHobbies and it would change hobbies)
+
+    Way to make another object that will contain seperate data from the original
+      let person = {age: 30}
+      let anotherPerson = person 
+      anotherPerson.age = 32
+        person will pring {age: 32}
+      // this is how you create a new One
+      let yetAnotherPerson = { ...person }
+
+      ... = spread operator
+        pulls out all the key value pairs and adds them as new key value pairs to this new object
+
+
+
+____________________________________________________________________________________________________________________________________________
+
+
+GARBAGE COLLECTION
+
+How is Heap memory managed?
+  Garbage Collector
+    Periodically checks Heap for unused objects (objects without references)
+    removes unused objects (like setting something to null)
+  
+  Beware of Memory Leaks:
+    Unused objects, where you still hold references to  
+
+____________________________________________________________________________________________________________________________________________
