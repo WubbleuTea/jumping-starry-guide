@@ -4,3 +4,22 @@ Storing a function in a property. that is called a method
 
 
 ____________________________________________________________________________________________________________________________________________
+
+DIFFERNT WAYS OF DEFINING FUNCTIONS
+
+Function Declaration / Function Statement
+  function multiply(a,b) {
+    return a * b
+  }
+
+  Hoisted to top, can be declared anywhere in the file (i.e. also after it's used)
+
+Function Expression
+  const multiply = function(a,b) {
+      return a * b
+  }
+  
+  Hoisted to top but not initialized / defined, 
+  Cant be declared anywhere in the file (i.e. not after it's used)
+
+____________________________________________________________________________________________________________________________________________
