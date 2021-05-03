@@ -106,3 +106,29 @@ startGameBtn.addEventListener('click', () => {
 // };
 
 // person.greet();
+
+// NOT RELATED TO THE GAME
+// rest operator turns arguments into an array.
+const sumUp = (...numbers) => {
+  const validateNumber = number => {
+    return isNaN(number) ? 0 : number;
+  };
+
+  let sum = 0;
+  for (const num of numbers) {
+    sum += validateNumber(num);
+  }
+  return sum;
+};
+
+//
+const subtractUp = function () {
+  let sum = 0;
+  for (const num of arguments) {
+    sum -= num;
+  }
+  return sum;
+};
+
+console.log(sumUp(1, 2, 3, 4, 5, 6, 7, 8, -100));
+console.log(subtractUp(1, 2, 3, 4, 5, 6, 7, 8, -100));
