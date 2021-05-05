@@ -1,37 +1,43 @@
 const DEFAULT_NAME = 'JAKE';
 const DEFAULT_PHRASE = 'HOWDY';
 
-const sayHello = name => {
-  console.log('Hi ' + name);
-};
+const sayHello = name => console.log('Hi ' + name);
 
-const sayGreeting = (name, greeting = DEFAULT_PHRASE) => {
+const sayGreeting = (name, greeting = DEFAULT_PHRASE) =>
   console.log(`${greeting} ${name}`);
-};
 
-const sayHelloStatic = () => {
-  console.log('Greetings Joe');
-};
+const sayHelloStatic = () => console.log('Greetings Joe');
 
-const sayHelloReturned = (name = DEFAULT_NAME) => {
-  const greeting = 'Hi ' + name;
-  return greeting;
-};
-const sayHelloCheck = (resultHandler, ...names) => {
-  const validateName = name => {
-    return typeof name === 'string' ? name : null;
-  };
+const sayHelloReturned = (name = DEFAULT_NAME) => 'Hi ' + name;
 
-  for (individualName of names) {
-    if (validateName(individualName)) {
-      resultHandler(individualName);
+const checkInput = (resultHandler, ...strings) => {
+  let hasEmptyText = false;
+  for (const text of strings) {
+    if (!text) {
+      hasEmptyText = true;
+      break;
     }
+  }
+  if (!hasEmptyText) {
+    resultHandler();
   }
 };
 
-const checkInput = name => {
-  alert(`Hello ${name}`);
-};
+// const sayHelloCheck = (resultHandler, ...names) => {
+//   const validateName = name => {
+//     return typeof name === 'string' ? name : null;
+//   };
+
+//   for (individualName of names) {
+//     if (validateName(individualName)) {
+//       resultHandler(individualName);
+//     }
+//   }
+// };
+
+// const checkInput = name => {
+//   alert(`Hello ${name}`);
+// };
 
 sayHello('Josh');
 
@@ -41,4 +47,13 @@ sayHelloStatic();
 
 console.log(sayHelloReturned('JOHNNY'));
 
-sayHelloCheck(checkInput, 'Josh', 'Jane', 'Jill', 'Jack');
+checkInput(
+  () => {
+    console.log('All Not Empty');
+  },
+  'Hello',
+  'test',
+  ''
+);
+
+// sayHelloCheck(checkInput, 'Josh', 'Jane', 'Jill', 'Jack');
