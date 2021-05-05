@@ -17,8 +17,21 @@ const sayHelloReturned = (name = DEFAULT_NAME) => {
   const greeting = 'Hi ' + name;
   return greeting;
 };
+const sayHelloCheck = (resultHandler, ...names) => {
+  const validateName = name => {
+    return typeof name === 'string' ? name : null;
+  };
 
-const checkInput = (greeting, ...names) => {};
+  for (individualName of names) {
+    if (validateName(individualName)) {
+      resultHandler(individualName);
+    }
+  }
+};
+
+const checkInput = name => {
+  alert(`Hello ${name}`);
+};
 
 sayHello('Josh');
 
@@ -27,3 +40,5 @@ sayGreeting('Jane', 'Not howdy');
 sayHelloStatic();
 
 console.log(sayHelloReturned('JOHNNY'));
+
+sayHelloCheck(checkInput, 'Josh', 'Jane', 'Jill', 'Jack');

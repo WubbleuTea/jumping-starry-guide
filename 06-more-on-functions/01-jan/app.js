@@ -129,6 +129,7 @@ const subtractUp = function () {
   }
   return sum;
 };
+
 const showResult = result => {
   alert(`The result after adding all numbers is: ${result}`);
 };
