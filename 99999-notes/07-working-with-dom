@@ -1,0 +1,23 @@
+____________________________________________________________________________________________________________________________________________
+
+THE DOCUMENT OBJECT MODEL (DOM)
+
+JAVASCRIPT 
+  Hosted Language
+    Browswer provides the enviornment for the JavaScript to run and the JavaScript engine
+
+
+BROWSER
+  Parses and renders code
+  Exopses Web API to allow JavaScript to work with the parsed document. (DOM)
+
+  DOM is the object representation HTML code. That the browser creates behind the scenes. 
+
+  document
+    Root DOM Node (top most entrypoint to HTML)
+    Provides access to element querying, DOM content etc 
+
+  window
+    The active Browswer Window/ Tab
+    Acts as global storage for script also provides access to window-specific properties and methods
+____________________________________________________________________________________________________________________________________________
