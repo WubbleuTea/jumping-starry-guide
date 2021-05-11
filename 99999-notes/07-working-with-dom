@@ -21,3 +21,16 @@ BROWSER
     The active Browswer Window/ Tab
     Acts as global storage for script also provides access to window-specific properties and methods
 ____________________________________________________________________________________________________________________________________________
+
+DOM continued
+
+  Element Node  
+    HTML elements because the browser does not work with text
+      HTML, HEAD, TITLE, BODY, HEADER, H!, MAIN P 
+  
+  Browser keeps track of parent child relationships just like in your code with a NODE TREE
+
+  Text Node
+    Seperate from Element node.
+____________________________________________________________________________________________________________________________________________
+
