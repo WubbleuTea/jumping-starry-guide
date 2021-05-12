@@ -26,11 +26,46 @@ DOM continued
 
   Element Node  
     HTML elements because the browser does not work with text
-      HTML, HEAD, TITLE, BODY, HEADER, H!, MAIN P 
+      HTML, HEAD, TITLE, BODY, HEADER, H!, MAIN, P 
   
   Browser keeps track of parent child relationships just like in your code with a NODE TREE
 
   Text Node
     Seperate from Element node.
 ____________________________________________________________________________________________________________________________________________
+
+QUERYING ELEMENTS 
+
+querySelectop(), getElementByID()
+  Returns single element (first matched element)
+  Different ways of querying elements (by CSS selector or by ID, ect.)
+  Direct reference to DOM element is returned
+
+
+querySelectorAll(), getElementsByTagName()
+  Return collections of elements (array-like objects): NodeList
+  Different ways of querying elements (by CSS selector, by tag name, by CSS class)
+  querySelectorAll() returns a non-live NodeList, getXbyY returns a live NodeList
+
+
+
+____________________________________________________________________________________________________________________________________________
+
+NODES & ELEMENTS 
+
+NODES 
+  The objects that make up the DOM
+  HTML tags are "element nodes" (or just "elements)
+  Text creates "text nodes"
+  Attributes create "attribute nodes"
+
+ELEMENTS 
+  One type of NODES 
+  Special properties and methods to interact with the elements
+  Avaliable methods and properties depend on the kind of element
+  Can be selected in various different ways (via JavaScript)
+  Can be created and removed via JavaScript 
+____________________________________________________________________________________________________________________________________________
+
+
 
