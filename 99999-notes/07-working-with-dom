@@ -67,5 +67,19 @@ ELEMENTS
   Can be created and removed via JavaScript 
 ____________________________________________________________________________________________________________________________________________
 
+EVALUATING AND MANIPULATING ELEMENTS
+
+<p id="welcome-text" class="text-default">Welcome!</p>
+
+const p = document.getElementByID('welcome-text')
+
+  p.textContent => "Welcome!"
+  p.id => "welcome-text"
+  p.className => "text-default"
+
+  Assign new class name
+    p.className = "new-class"
+    have to use javascript class attributes not css.
+____________________________________________________________________________________________________________________________________________
 
 
