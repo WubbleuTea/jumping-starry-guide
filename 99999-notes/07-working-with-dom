@@ -82,4 +82,19 @@ const p = document.getElementByID('welcome-text')
     have to use javascript class attributes not css.
 ____________________________________________________________________________________________________________________________________________
 
+ATTRIBUTES VS PROPERTIES
 
+OFTEN
+  (BUT NOT ALWAYS) attributes are mapped to properties and "live synchronizations" is set up.
+
+  Attributes include id, class, value (values/tags)
+
+  storing a HTML element in a variable lets us access the properties   
+    These properties are automatically added on created DOM objects
+      const input - document.getElementByID('input')
+        input.id
+        input.className
+        input.value
+  Attribute names are not always equal to the property name 
+    class in HTML != className in JavaScript but refer to the same thing.
+____________________________________________________________________________________________________________________________________________
