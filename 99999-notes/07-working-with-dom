@@ -98,3 +98,32 @@ OFTEN
   Attribute names are not always equal to the property name 
     class in HTML != className in JavaScript but refer to the same thing.
 ____________________________________________________________________________________________________________________________________________
+
+TRAVERSING THE DOM
+    EXAMPLE:
+      <div> {PARENT of p, ANCESTOR of both p and em}
+        <p> {CHILD/DECENDANT of div}
+          A <em>test!</em> {DECENDANT of DIV, CHILD of p}
+        </p>
+      <div>
+
+  Children (child element)
+    direct child node or element (directly inside of that element)
+    the div is the parent and only the p is a child to the div, not the em child
+
+  Descendants
+    direct or indirect child node or element
+
+  Parents
+    Direct Parent nod or element
+      div is a parent of p
+  Ancestor
+    Direct or indirect parent node or element
+
+{  parentNode, parentElement, closest()
+
+  Current node can tapinto 
+
+  childNodes, children, querySelector()}
+____________________________________________________________________________________________________________________________________________
+
