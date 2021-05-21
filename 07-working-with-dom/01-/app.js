@@ -1,21 +1,26 @@
-const h1 = document.getElementById('main-title');
+const ul = document.body.firstElementChild.nextElementSibling;
+const firstLi = ul.firstElementChild;
 
-h1.textContent = 'Some new title!';
-h1.style.color = 'white';
-h1.style.backgroundColor = 'black';
+console.log(firstLi);
 
-const li = document.querySelector('li:last-of-type');
+// const h1 = document.getElementById('main-title');
 
-li.textContent = `${li.textContent} Changed!`;
+// h1.textContent = 'Some new title!';
+// h1.style.color = 'white';
+// h1.style.backgroundColor = 'black';
 
-const body = document.body;
+// const li = document.querySelector('li:last-of-type');
 
-// Does not give live changes to the elements (# of items in array)
-// const listItemElements = document.querySelectorAll('li');
+// li.textContent = `${li.textContent} Changed!`;
 
-// Gives live changes to the element (# of items in array)
-const listItemElements = document.getElementsByTagName('li');
+// const body = document.body;
 
-for (const listItemEl of listItemElements) {
-  console.dir(listItemEl);
-}
+// // Does not give live changes to the elements (# of items in array)
+// // const listItemElements = document.querySelectorAll('li');
+
+// // Gives live changes to the element (# of items in array)
+// const listItemElements = document.getElementsByTagName('li');
+
+// for (const listItemEl of listItemElements) {
+//   console.dir(listItemEl);
+// }
