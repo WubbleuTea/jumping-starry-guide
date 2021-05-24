@@ -126,6 +126,22 @@ TRAVERSING THE DOM
 
   childNodes, children, querySelector()}
 
-  
+
 ____________________________________________________________________________________________________________________________________________
 
+STYLING DOM ELEMENTS
+
+Via style property
+  Directly target individual CSS styles (on the element)
+  Controls styles as inline styles on the element
+  Style property nemas are based on CSS property names (e.g. backgroundColor)
+
+Via className 
+  Directly set the CSS classes assigned to that element
+  Set/ Control all classes at once
+  You can also control the id or other properties
+
+Via classList
+  Conveniently add, remove or toggle CSS classes
+  fine-grained control over classes that are addedCan be used with className (with care)
+____________________________________________________________________________________________________________________________________________
