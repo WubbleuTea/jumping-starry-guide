@@ -145,3 +145,13 @@ Via classList
   Conveniently add, remove or toggle CSS classes
   fine-grained control over classes that are addedCan be used with className (with care)
 ____________________________________________________________________________________________________________________________________________
+
+CREATING AND INSERTING ELEMENTS
+
+HTML String 
+  inner HTML => add (render) HTML string
+  insertAdjacentHTML() => Add (render) HTML string in specific position
+
+createElement()
+____________________________________________________________________________________________________________________________________________
+
