@@ -152,6 +152,9 @@ HTML String
   inner HTML => add (render) HTML string
   insertAdjacentHTML() => Add (render) HTML string in specific position
 
-createElement()
+createElement() 
+  appendChild() / append() => Append new DOM element/node
+  prepend(), before(), after(), insertBefore() =>  Insert new DOM element / node in specific position
+  replaceChild(), replaceWith() => Replace existing DOM element / node with new one
 ____________________________________________________________________________________________________________________________________________
 
