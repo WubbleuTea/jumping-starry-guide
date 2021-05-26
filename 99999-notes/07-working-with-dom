@@ -158,3 +158,22 @@ createElement()
   replaceChild(), replaceWith() => Replace existing DOM element / node with new one
 ____________________________________________________________________________________________________________________________________________
 
+INSERTION AND REMOVAL methods
+
+Broad browser support(plenty of resources on the internet) LEFT SIDE OF EQUALS
+NOT supported in all browsers (Seen in some tutorials but not most common option) RIGHT SIDE OF EQUALS
+
+appendChild() = append() || prepend()
+
+
+insertAdjacentElement() = before() || after()
+
+
+replaceChild() = replaceWith()
+
+
+removeChild() = remove()
+
+____________________________________________________________________________________________________________________________________________
+
+
