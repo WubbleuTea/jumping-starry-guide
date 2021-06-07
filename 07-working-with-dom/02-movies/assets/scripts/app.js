@@ -28,6 +28,16 @@ const updateUI = () => {
   }
 };
 
+const toggleBackdrop = () => {
+  backdrop.classList.toggle('visible');
+};
+
+const closeMovieDeletionModal = () => {
+  toggleBackdrop();
+
+  deleteMovieModal.classList.remove('visible');
+};
+
 const deleteMovieHandler = movieId => {
   let movieIndex = 0;
   for (const movie of movies) {
@@ -41,19 +51,25 @@ const deleteMovieHandler = movieId => {
   const listRoot = document.getElementById('movie-list');
   listRoot.children[movieIndex].remove();
   // listRoot.removeChild(listRoot.children[movieIndex]);
-};
-
-const closeMovieDeletionModal = () => {
-  toggleBackdrop();
-
-  deleteMovieModal.classList.remove('visible');
+  closeMovieDeletionModal();
+  updateUI();
 };
 
 const startDeleteMovieHandler = movieId => {
   deleteMovieModal.classList.add('visible');
   toggleBackdrop();
   const cancelDeletionButton = deleteMovieModal.querySelector('.btn--passive');
-  const confirmDeletionButton = deleteMovieModal.querySelector('.btn--danger');
+  let confirmDeletionButton = deleteMovieModal.querySelector('.btn--danger');
+
+  confirmDeletionButton.replaceWith(confirmDeletionButton.cloneNode(true));
+
+  confirmDeletionButton = deleteMovieModal.querySelector('.btn--danger');
+  // Will not work!
+  // confirmDeletionButton.removeEventListener(
+  //   'click',
+  //   deleteMovieHandler.bind(null, movieId)
+  // );
+  cancelDeletionButton.removeEventListener('click', closeMovieDeletionModal);
 
   cancelDeletionButton.addEventListener('click', closeMovieDeletionModal);
   confirmDeletionButton.addEventListener(
@@ -83,10 +99,6 @@ const renderNewMovieElement = (id, title, imageUrl, rating) => {
   listRoot.append(newMovieElement);
 };
 
-const toggleBackdrop = () => {
-  backdrop.classList.toggle('visible');
-};
-
 const closeMovieModal = () => {
   addMovieModal.classList.remove('visible');
 };
@@ -104,6 +116,7 @@ const clearMovieInputs = () => {
 
 const cancelAddMovieHandler = () => {
   closeMovieModal();
+  toggleBackdrop();
   clearMovieInputs();
 };
 
@@ -147,6 +160,7 @@ const addMovieHandler = () => {
 const backdropClickHandler = () => {
   closeMovieModal();
   closeMovieDeletionModal();
+  clearMovieInputs();
 };
 
 startAddMovieButton.addEventListener('click', showMovieModal);
