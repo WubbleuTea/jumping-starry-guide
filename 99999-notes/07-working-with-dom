@@ -1,0 +1,179 @@
+____________________________________________________________________________________________________________________________________________
+
+THE DOCUMENT OBJECT MODEL (DOM)
+
+JAVASCRIPT 
+  Hosted Language
+    Browswer provides the enviornment for the JavaScript to run and the JavaScript engine
+
+
+BROWSER
+  Parses and renders code
+  Exopses Web API to allow JavaScript to work with the parsed document. (DOM)
+
+  DOM is the object representation HTML code. That the browser creates behind the scenes. 
+
+  document
+    Root DOM Node (top most entrypoint to HTML)
+    Provides access to element querying, DOM content etc 
+
+  window
+    The active Browswer Window/ Tab
+    Acts as global storage for script also provides access to window-specific properties and methods
+____________________________________________________________________________________________________________________________________________
+
+DOM continued
+
+  Element Node  
+    HTML elements because the browser does not work with text
+      HTML, HEAD, TITLE, BODY, HEADER, H!, MAIN, P 
+  
+  Browser keeps track of parent child relationships just like in your code with a NODE TREE
+
+  Text Node
+    Seperate from Element node.
+____________________________________________________________________________________________________________________________________________
+
+QUERYING ELEMENTS 
+
+querySelectop(), getElementByID()
+  Returns single element (first matched element)
+  Different ways of querying elements (by CSS selector or by ID, ect.)
+  Direct reference to DOM element is returned
+
+
+querySelectorAll(), getElementsByTagName()
+  Return collections of elements (array-like objects): NodeList
+  Different ways of querying elements (by CSS selector, by tag name, by CSS class)
+  querySelectorAll() returns a non-live NodeList, getXbyY returns a live NodeList
+
+
+
+____________________________________________________________________________________________________________________________________________
+
+NODES & ELEMENTS 
+
+NODES 
+  The objects that make up the DOM
+  HTML tags are "element nodes" (or just "elements)
+  Text creates "text nodes"
+  Attributes create "attribute nodes"
+
+ELEMENTS 
+  One type of NODES 
+  Special properties and methods to interact with the elements
+  Avaliable methods and properties depend on the kind of element
+  Can be selected in various different ways (via JavaScript)
+  Can be created and removed via JavaScript 
+____________________________________________________________________________________________________________________________________________
+
+EVALUATING AND MANIPULATING ELEMENTS
+
+<p id="welcome-text" class="text-default">Welcome!</p>
+
+const p = document.getElementByID('welcome-text')
+
+  p.textContent => "Welcome!"
+  p.id => "welcome-text"
+  p.className => "text-default"
+
+  Assign new class name
+    p.className = "new-class"
+    have to use javascript class attributes not css.
+____________________________________________________________________________________________________________________________________________
+
+ATTRIBUTES VS PROPERTIES
+
+OFTEN
+  (BUT NOT ALWAYS) attributes are mapped to properties and "live synchronizations" is set up.
+
+  Attributes include id, class, value (values/tags)
+
+  storing a HTML element in a variable lets us access the properties   
+    These properties are automatically added on created DOM objects
+      const input - document.getElementByID('input')
+        input.id
+        input.className
+        input.value
+  Attribute names are not always equal to the property name 
+    class in HTML != className in JavaScript but refer to the same thing.
+____________________________________________________________________________________________________________________________________________
+
+TRAVERSING THE DOM
+    EXAMPLE:
+      <div> {PARENT of p, ANCESTOR of both p and em}
+        <p> {CHILD/DECENDANT of div}
+          A <em>test!</em> {DECENDANT of DIV, CHILD of p}
+        </p>
+      <div>
+
+  Children (child element)
+    direct child node or element (directly inside of that element)
+    the div is the parent and only the p is a child to the div, not the em child
+
+  Descendants
+    direct or indirect child node or element
+
+  Parents
+    Direct Parent nod or element
+      div is a parent of p
+  Ancestor
+    Direct or indirect parent node or element
+
+{  parentNode, parentElement, closest()
+
+  Current node can tapinto 
+
+  childNodes, children, querySelector()}
+
+
+____________________________________________________________________________________________________________________________________________
+
+STYLING DOM ELEMENTS
+
+Via style property
+  Directly target individual CSS styles (on the element)
+  Controls styles as inline styles on the element
+  Style property nemas are based on CSS property names (e.g. backgroundColor)
+
+Via className 
+  Directly set the CSS classes assigned to that element
+  Set/ Control all classes at once
+  You can also control the id or other properties
+
+Via classList
+  Conveniently add, remove or toggle CSS classes
+  fine-grained control over classes that are addedCan be used with className (with care)
+____________________________________________________________________________________________________________________________________________
+
+CREATING AND INSERTING ELEMENTS
+
+HTML String 
+  inner HTML => add (render) HTML string
+  insertAdjacentHTML() => Add (render) HTML string in specific position
+
+createElement() 
+  appendChild() / append() => Append new DOM element/node
+  prepend(), before(), after(), insertBefore() =>  Insert new DOM element / node in specific position
+  replaceChild(), replaceWith() => Replace existing DOM element / node with new one
+____________________________________________________________________________________________________________________________________________
+
+INSERTION AND REMOVAL methods
+
+Broad browser support(plenty of resources on the internet) LEFT SIDE OF EQUALS
+NOT supported in all browsers (Seen in some tutorials but not most common option) RIGHT SIDE OF EQUALS
+
+appendChild() = append() || prepend()
+
+
+insertAdjacentElement() = before() || after()
+
+
+replaceChild() = replaceWith()
+
+
+removeChild() = remove()
+
+____________________________________________________________________________________________________________________________________________
+
+
