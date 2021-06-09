@@ -1,0 +1,25 @@
+____________________________________________________________________________________________________________________________________________
+
+WHAT'S AN "ITERABLE"?
+
+  An iterable 
+    Technically
+      Any Object that implements the "iterable" protocol and have an @@iterator method (i.e. Symbol.iterator)
+    
+    To us humans
+      Objects where you can use the for-of loop.
+    
+  NOT EVERY ITERABLE IS AN ARRAY!
+    Other iterables are (for example)
+      NodeList, String, Map, Set
+
+WHAT's AN "ARRAY-LIKE OBJECT"?
+  An Array-like Object 
+    Technically and to us Humans:
+     Objects that have a length property and use indexes to access items
+  
+  NOT EVERY ARRAY LIKE OBJECT IS AN ARRAY!
+    Other array-likes are (for example)
+      NodeList, String
+
+____________________________________________________________________________________________________________________________________________
