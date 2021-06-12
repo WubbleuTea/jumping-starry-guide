@@ -17,3 +17,23 @@ console.log(listItems);
 
 const arrayListItems = Array.from(listItems);
 console.log(arrayListItems);
+
+// Arrays can hold same types of data
+const hobbies = ['Cooking', 'Sports'];
+
+//  Arrays can also hold mixed types of data
+const personalData = [30, 'Josh', { moreDetail: [] }];
+
+// Nested Arrays ALSO known as multi dimension
+const analyticsData = [
+  [1, 1.6],
+  [-5.4, 2.1]
+];
+
+for (const data of analyticsData) {
+  for (const dataPoint of data) {
+    console.log(dataPoint);
+  }
+}
+
+console.log(personalData[0]);
