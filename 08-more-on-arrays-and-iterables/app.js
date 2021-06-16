@@ -58,6 +58,24 @@ hobbies.shift();
 console.log(hobbies);
 
 hobbies[1] = 'CHANGED';
-hobbies[5] = 'FIFTH';
+// // if you hard code a change to an index not in the current arry it will insert it where you want to but add empty elements into the array
+// hobbies[5] = 'FIFTH';
 
 console.log(hobbies, hobbies[4]);
+
+// at index 1 delete none and insert the third argument to become the new index that you put in the first argument.
+hobbies.splice(1, 0, 'Good Food');
+console.log('spliced hobbies', hobbies);
+
+//splce returns the removed elements
+const removedElements = hobbies.splice(0, 1);
+console.log('spliced deleted hobbies', hobbies);
+console.log('removed elements ', removedElements);
+
+//if you use negative numbers as the index number splice will look from the end and not the beginning
+const removedElementsNegative = hobbies.splice(-1, 1);
+console.log('spliced deleted negative hobbies', hobbies);
+console.log('removed elements negative', removedElementsNegative);
+
+// // splice without a delete count it deletes that item and all the items after the index number.
+// hobbies.splice(1)
