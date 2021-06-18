@@ -92,9 +92,14 @@ const testResults = [1, 5.3, 1.5, 10.99, -5, 10];
 
 // const storedResults = testResults.slice(0, 2);
 
-// if you only put one number it takes that place to the end
-const storedResults = testResults.slice(2);
+// // if you only put one number it takes that place to the end
+// const storedResults = testResults.slice(2);
 
+//concat takes an array and adds it to another unlinke push.
+// push does this [1,2,3 [4,5,6]]
+// concat does this [1,2,3,4,5,6]
+// concat returns a new array
+const storedResults = testResults.concat([3.99, 2]);
 testResults;
 
 testResults.push(5.91);
