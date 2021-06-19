@@ -49,7 +49,7 @@
 // // Returns a number which is the length of the array
 // hobbies.unshift('Coding');
 // // Removes the last element from an Array
-// // // hobbies.pop()
+// hobbies.pop()
 // // Can save the value that is being popped in a variable
 // const poppedValue = hobbies.pop();
 // // Removes the first element from an Array
@@ -58,8 +58,8 @@
 // console.log(hobbies);
 
 // hobbies[1] = 'CHANGED';
-// // // if you hard code a change to an index not in the current arry it will insert it where you want to but add empty elements into the array
-// // hobbies[5] = 'FIFTH';
+// // if you hard code a change to an index not in the current arry it will insert it where you want to but add empty elements into the array
+// hobbies[5] = 'FIFTH';
 
 // console.log(hobbies, hobbies[4]);
 
@@ -67,7 +67,7 @@
 // hobbies.splice(1, 0, 'Good Food');
 // console.log('spliced hobbies', hobbies);
 
-// //splce returns the removed elements
+// // splce returns the removed elements
 // const removedElements = hobbies.splice(0, 1);
 // console.log('spliced deleted hobbies', hobbies);
 // console.log('removed elements ', removedElements);
@@ -77,26 +77,26 @@
 // console.log('spliced deleted negative hobbies', hobbies);
 // console.log('removed elements negative', removedElementsNegative);
 
-// // // splice without a delete count it deletes that item and all the items after the index number.
-// // hobbies.splice(1)
+// // splice without a delete count it deletes that item and all the items after the index number.
+// hobbies.splice(1)
 
-const testResults = [1, 5.3, 1.5, 10.99, -5, 10];
+const testResults = [1, 5.3, 1.5, 10.99, 1.5, -5, 10];
 // // both values are changed because arrays are reference values and are updated
 // const storedResults = testResults;
+
 // // however if you slice the array then it will only ever reference the original array
 // // slice with no values give you the full array
-
 // const storedResults = testResults.slice();
+
 // // you can include numbers in slice to take a certain range
 // // can use negative intergers
-
 // const storedResults = testResults.slice(0, 2);
 
 // // if you only put one number it takes that place to the end
 // const storedResults = testResults.slice(2);
 
-//concat takes an array and adds it to another unlinke push.
-// push does this [1,2,3 [4,5,6]]
+// concat takes an array and adds it to another unlinke push.
+// push does this [1,2,3, [4,5,6]]
 // concat does this [1,2,3,4,5,6]
 // concat returns a new array
 const storedResults = testResults.concat([3.99, 2]);
@@ -106,3 +106,18 @@ testResults.push(5.91);
 
 // slice returns a brand new array
 console.log(testResults, storedResults);
+
+// finds the index of the value you put in
+// If an array has multiple of the same value then it will only find the first one.
+// If index of does not find anything then it returns -1
+console.log(testResults.indexOf(1.5));
+
+// starts from the right and searches the array backwards.
+// If an array has multiple of the same value then it will only find the first one.
+// the Index starts with 0 as the far right. NOT the index it is on the array
+console.log(testResults.lastIndexOf(1.5));
+
+// index of Works well with primitave values but not reference values
+// If index of does not find anything then it returns -1
+const personData = [{ name: 'Josh' }, { name: 'Josue' }];
+console.log(personData.indexOf({ name: 'Josue' }));
