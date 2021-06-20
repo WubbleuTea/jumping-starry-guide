@@ -107,6 +107,11 @@ testResults.push(5.91);
 // slice returns a brand new array
 console.log(testResults, storedResults);
 
+// if you dont want the index and just want to see if the array has a value.  Returns true or false.
+console.log('includes', testResults.includes(10.99));
+// These do the same thing! Checking to see if the array inclues a value
+console.log('index of', testResults.indexOf(10.99) !== -1);
+
 // finds the index of the value you put in
 // If an array has multiple of the same value then it will only find the first one.
 // If index of does not find anything then it returns -1
