@@ -121,3 +121,17 @@ console.log(testResults.lastIndexOf(1.5));
 // If index of does not find anything then it returns -1
 const personData = [{ name: 'Josh' }, { name: 'Josue' }];
 console.log(personData.indexOf({ name: 'Josue' }));
+
+const josue = personData.find((person, idx, persons) => {
+  return person.name === 'Josue';
+});
+
+josue.name = 'Billy';
+
+console.log(josue, personData);
+
+const joshIndex = personData.findIndex((person, idx, persons) => {
+  return person.name === 'Josh';
+});
+
+console.log(joshIndex);
