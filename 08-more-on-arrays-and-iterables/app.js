@@ -232,3 +232,26 @@ const nameFragments = ['Max', 'Schwartz'];
 const name = nameFragments.join(' ');
 
 console.log('joined', name);
+
+// Can use spread operator to copy
+const copiedNameFragments = [...nameFragments];
+nameFragments.push('Mr.');
+console.log(nameFragments, copiedNameFragments);
+
+// Spread Operator also can pull items or elements from an array to be used in a function that does not take an array
+console.log(Math.min(...prices));
+
+// Spread operator copies the place in memory that the items are.  So if you change an item you change it in both places.  See persons[0].age = 37;
+// HOWEVER, you can map through and tell JS to make a new object for each item in the array AND we took the spread operator out.
+const persons = [
+  { name: 'Josh', age: 30 },
+  { name: 'Josue', age: 31 }
+];
+
+const copiedPersons = persons.map(person => ({
+  name: person.name,
+  age: person.age
+}));
+persons.push({ name: 'Jill', age: 34 });
+persons[0].age = 37;
+console.log(persons, copiedPersons);
