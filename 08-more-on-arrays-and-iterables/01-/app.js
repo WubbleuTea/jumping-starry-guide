@@ -256,13 +256,13 @@
 // persons[0].age = 37;
 // console.log(persons, copiedPersons);
 
-//ARRAY DESTRUCTURING
-const nameData = ['Josh', 'Torres', 'Mr', 30];
-// const firstName = nameData[0];
-// const lastName = nameData[1];
+// //ARRAY DESTRUCTURING
+// const nameData = ['Josh', 'Torres', 'Mr', 30];
+// // const firstName = nameData[0];
+// // const lastName = nameData[1];
 
-const [firstName, lastName, ...otherInformation] = nameData;
+// const [firstName, lastName, ...otherInformation] = nameData;
 
-console.log('First Name:', firstName);
-console.log('Last Name:', lastName);
-console.log('Other Info:', otherInformation);
+// console.log('First Name:', firstName);
+// console.log('Last Name:', lastName);
+// console.log('Other Info:', otherInformation);
