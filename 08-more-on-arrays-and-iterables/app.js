@@ -157,101 +157,112 @@
 
 // console.log(prices, taxAdjustedPrices);
 
-const prices = [10.99, 5.99, 3.99, 6.59];
-const tax = 0.19;
-// map transform an array easier than for/forEach
-// must return for each iteration.
-const taxAdjustedPrices = prices.map((price, idx, prices) => {
-  const priceObj = { index: idx, taxAdjPrice: price * (1 + tax) };
-  return priceObj;
-});
+// const prices = [10.99, 5.99, 3.99, 6.59];
+// const tax = 0.19;
+// // map transform an array easier than for/forEach
+// // must return for each iteration.
+// const taxAdjustedPrices = prices.map((price, idx, prices) => {
+//   const priceObj = { index: idx, taxAdjPrice: price * (1 + tax) };
+//   return priceObj;
+// });
 
-// console.log(prices, taxAdjustedPrices);
+// // console.log(prices, taxAdjustedPrices);
 
-// // Sorts low to high
+// // // Sorts low to high
+// // const sortedPrices = prices.sort((a, b) => {
+// //   if (a > b) {
+// //     return 1;
+// //   } else if (a === b) {
+// //     return 0;
+// //   } else {
+// //     return -1;
+// //   }
+// // });
+
+// // Sorts high to low
 // const sortedPrices = prices.sort((a, b) => {
 //   if (a > b) {
-//     return 1;
+//     return -1;
 //   } else if (a === b) {
 //     return 0;
 //   } else {
-//     return -1;
+//     return 1;
 //   }
 // });
 
-// Sorts high to low
-const sortedPrices = prices.sort((a, b) => {
-  if (a > b) {
-    return -1;
-  } else if (a === b) {
-    return 0;
-  } else {
-    return 1;
-  }
-});
+// // can physically reverse an array using .reverse()
+// // console.log(sortedPrices.reverse());
+// console.log('sorted', sortedPrices);
 
-// can physically reverse an array using .reverse()
-// console.log(sortedPrices.reverse());
-console.log('sorted', sortedPrices);
+// // const filteredArray = prices.filter((price, idx, prices) => {
+// //   return price > 6;
+// // });
 
-// const filteredArray = prices.filter((price, idx, prices) => {
-//   return price > 6;
-// });
+// // same as above but shortened for uneeded code
+// const filteredArray = prices.filter(price => price > 6);
 
-// same as above but shortened for uneeded code
-const filteredArray = prices.filter(price => price > 6);
+// console.log('filtered', filteredArray);
 
-console.log('filtered', filteredArray);
+// // let sum = 0;
 
-// let sum = 0;
+// // prices.forEach(price => {
+// //   sum += price;
+// // });
 
-// prices.forEach(price => {
-//   sum += price;
-// });
+// // console.log(sum);
 
-// console.log(sum);
+// // Works like before
 
-// Works like before
+// // const sum = prices.reduce((prevValue, curValue, curIndex, prices) => {
+// //   return prevValue + curValue;
+// // }, 0);
 
-// const sum = prices.reduce((prevValue, curValue, curIndex, prices) => {
-//   return prevValue + curValue;
-// }, 0);
+// //reduced the reducer function
+// const sum = prices.reduce((prevValue, curValue) => prevValue + curValue, 0);
 
-//reduced the reducer function
-const sum = prices.reduce((prevValue, curValue) => prevValue + curValue, 0);
+// console.log('sum', sum);
 
-console.log('sum', sum);
+// const data = 'new york;10.99;2000';
+// const transformedData = data.split(';');
+// transformedData[1] = +transformedData[1];
 
-const data = 'new york;10.99;2000';
-const transformedData = data.split(';');
-transformedData[1] = +transformedData[1];
+// console.log('split string', transformedData);
 
-console.log('split string', transformedData);
+// const nameFragments = ['Max', 'Schwartz'];
+// const name = nameFragments.join(' ');
 
-const nameFragments = ['Max', 'Schwartz'];
-const name = nameFragments.join(' ');
+// console.log('joined', name);
 
-console.log('joined', name);
+// // Can use spread operator to copy
+// const copiedNameFragments = [...nameFragments];
+// nameFragments.push('Mr.');
+// console.log(nameFragments, copiedNameFragments);
 
-// Can use spread operator to copy
-const copiedNameFragments = [...nameFragments];
-nameFragments.push('Mr.');
-console.log(nameFragments, copiedNameFragments);
+// // Spread Operator also can pull items or elements from an array to be used in a function that does not take an array
+// console.log(Math.min(...prices));
 
-// Spread Operator also can pull items or elements from an array to be used in a function that does not take an array
-console.log(Math.min(...prices));
+// // Spread operator copies the place in memory that the items are.  So if you change an item you change it in both places.  See persons[0].age = 37;
+// // HOWEVER, you can map through and tell JS to make a new object for each item in the array AND we took the spread operator out.
+// const persons = [
+//   { name: 'Josh', age: 30 },
+//   { name: 'Josue', age: 31 }
+// ];
 
-// Spread operator copies the place in memory that the items are.  So if you change an item you change it in both places.  See persons[0].age = 37;
-// HOWEVER, you can map through and tell JS to make a new object for each item in the array AND we took the spread operator out.
-const persons = [
-  { name: 'Josh', age: 30 },
-  { name: 'Josue', age: 31 }
-];
+// const copiedPersons = persons.map(person => ({
+//   name: person.name,
+//   age: person.age
+// }));
+// persons.push({ name: 'Jill', age: 34 });
+// persons[0].age = 37;
+// console.log(persons, copiedPersons);
 
-const copiedPersons = persons.map(person => ({
-  name: person.name,
-  age: person.age
-}));
-persons.push({ name: 'Jill', age: 34 });
-persons[0].age = 37;
-console.log(persons, copiedPersons);
+//ARRAY DESTRUCTURING
+const nameData = ['Josh', 'Torres', 'Mr', 30];
+// const firstName = nameData[0];
+// const lastName = nameData[1];
+
+const [firstName, lastName, ...otherInformation] = nameData;
+
+console.log('First Name:', firstName);
+console.log('Last Name:', lastName);
+console.log('Other Info:', otherInformation);
