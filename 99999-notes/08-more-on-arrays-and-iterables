@@ -26,7 +26,7 @@ ________________________________________________________________________________
 
 MAPS & SETS
 
-  ARRAYS
+  ARRAYS (work with 98% of time)
     *Most Important/ One you work with the most.
     Store (nested) data of any kind and length.
     Iterable, also MANY special array methods available.
@@ -48,4 +48,17 @@ MAPS & SETS
     Order is guaranteed.
     Duplicate key are NOT allowed.
     Key-based access.
+____________________________________________________________________________________________________________________________________________
+
+MAPS VS OBJECTS
+
+  MAPS
+    Can use ANY values (and types) as keys
+    Better performance for large quantites of data.
+    Better performance when adding or removing data frequently
+
+  OBJECTS
+    Can ONLY use strings, numbers, or symbols as keys.
+    Perfect for small / meduim-sized sets of data.
+    Easier and quicker to create (typically also with better performance)
 ____________________________________________________________________________________________________________________________________________
