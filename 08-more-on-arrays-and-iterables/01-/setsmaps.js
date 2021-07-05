@@ -56,13 +56,21 @@
 // WEAK SET
 // Use this for data that you are ok letting go during garbage collection.
 
-let person = { name: 'Max' };
-const persons = new WeakSet();
-persons.add(person);
+// let person = { name: 'Max' };
+// const persons = new WeakSet();
+// persons.add(person);
 
-// ... some operations
-// changing the person to null allows it to be garbage collected but we don't know the exact time it will be collected.
-person = null;
-console.log(persons);
+// // ... some operations
+// // changing the person to null allows it to be garbage collected but we don't know the exact time it will be collected.
+// person = null;
+// console.log(persons);
 
 // WEAK MAP
+let person = { name: 'Max' };
+
+const personData = new WeakMap();
+personData.set(person, 'Extra Info!');
+// eventually this will be garbage collected.
+person = null;
+
+console.log(personData);
