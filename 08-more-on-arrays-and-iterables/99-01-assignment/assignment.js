@@ -5,21 +5,26 @@ const greaterThanFive = numbs.filter(num => num > 5);
 
 console.log('greaterThanFive', greaterThanFive);
 
-const numbsObject = numbs.map((num, idx) => {
-  return { index: idx, number: num };
-});
+// // My solution
+// const numbsObject = numbs.map((num, idx) => {
+//   return { index: idx, number: num };
+// });
 
+// Possible solution
+const numbsObject = numbs.map((num, idx) => ({ index: idx, number: num }));
 console.log('numbsObject', numbsObject);
 
 const multiplyNumbs = numbs.reduce(
-  (previousValue, currentValue) => previousValue * currentValue
+  (previousValue, currentValue) => previousValue * currentValue,
+  1
 );
 
 console.log('multiplyNumbs', multiplyNumbs);
 
 // TWO/THREE
-const findMinMax = numbsArray => {
-  let largestNumber = 0;
+// ... here is a rest parameter
+function findMinMax(...numbsArray) {
+  let largestNumber = numbsArray[0];
   let smallestNumber = numbsArray[0];
   numbsArray.forEach(num => {
     if (num < smallestNumber) {
@@ -31,19 +36,30 @@ const findMinMax = numbsArray => {
 
   let answerArray = [smallestNumber, largestNumber];
   return answerArray;
-};
+}
 
-const minNum = findMinMax(numbs)[0];
-const maxNum = findMinMax(numbs)[1];
+// ... here is spread operator used to spread elements of array into a list of arguments.
+const [minNum, maxNum] = findMinMax(...numbs);
 console.log('min/max', minNum, maxNum);
 
 // FOUR
-const noRepeats = (numbsArray, newNumb) => {
-  const inArray = numbsArray.find(num => num === newNumb);
-  if (!inArray) {
-    numbsArray.push(newNumb);
-  }
-  return numbsArray;
-};
+// // My solution
+// const noRepeats = (numbsArray, newNumb) => {
+//   const inArray = numbsArray.find(num => num === newNumb);
+//   if (!inArray) {
+//     numbsArray.push(newNumb);
+//   }
+//   return numbsArray;
+// };
 
-console.log('noRepeats', noRepeats(numbs, 27));
+// console.log('noRepeats', noRepeats(numbs, 27));
+
+// possible other solution
+const noRepeatSet = new Set();
+noRepeatSet.add(10);
+noRepeatSet.add(10);
+noRepeatSet.add(9);
+noRepeatSet.add(8);
+noRepeatSet.add(10);
+
+console.log(noRepeatSet);
