@@ -1,0 +1,64 @@
+____________________________________________________________________________________________________________________________________________
+
+WHAT'S AN "ITERABLE"?
+
+  An iterable 
+    Technically
+      Any Object that implements the "iterable" protocol and have an @@iterator method (i.e. Symbol.iterator)
+    
+    To us humans
+      Objects where you can use the for-of loop.
+    
+  NOT EVERY ITERABLE IS AN ARRAY!
+    Other iterables are (for example)
+      NodeList, String, Map, Set
+
+WHAT's AN "ARRAY-LIKE OBJECT"?
+  An Array-like Object 
+    Technically and to us Humans:
+     Objects that have a length property and use indexes to access items
+  
+  NOT EVERY ARRAY LIKE OBJECT IS AN ARRAY!
+    Other array-likes are (for example)
+      NodeList, String
+
+____________________________________________________________________________________________________________________________________________
+
+MAPS & SETS
+
+  ARRAYS (work with 98% of time)
+    *Most Important/ One you work with the most.
+    Store (nested) data of any kind and length.
+    Iterable, also MANY special array methods available.
+    Order of elements is guaranteed
+    Duplicates are allowed.
+    Zero-based index to access elements.
+  SETS
+    Store (nested) data of any kind and length.
+    Iterable, also SOME special SET methods available.
+    Order of elements is NOT guaranteed.
+    Duplicates are NOT allowed.
+    No index-based access.
+  MAPS
+    Store key-value data of any kind and length.
+    Any key values are allowed.
+      Different from OBJECTS which can only use STRINGS, NUMBERS, and SYMBOLS.
+    Can have an ARRAY or OBJECT as a key.
+    Iterable, also SOME special MAP methods available.
+    Order is guaranteed.
+    Duplicate key are NOT allowed.
+    Key-based access.
+____________________________________________________________________________________________________________________________________________
+
+MAPS VS OBJECTS
+
+  MAPS
+    Can use ANY values (and types) as keys
+    Better performance for large quantites of data.
+    Better performance when adding or removing data frequently
+
+  OBJECTS
+    Can ONLY use strings, numbers, or symbols as keys.
+    Perfect for small / meduim-sized sets of data.
+    Easier and quicker to create (typically also with better performance)
+____________________________________________________________________________________________________________________________________________
