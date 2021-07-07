@@ -1,0 +1,27 @@
+____________________________________________________________________________________________________________________________________________
+
+WHAT ARE OBJECTS?
+
+  Objects:
+    Are A Core Data Structure in JavaScript.
+      Typically reflect "real-world" entities.
+        Way of working with things like buttons or movies.
+        Allows us to apply real-world logic to coding.
+      Made up of properties & Methods
+        Store data in properties and actions in Methods
+        Allow you to "group" related data together and split your code into logical pieces.
+    Have two types of values:
+      Primitive values
+        Numbers
+        Strings
+        Booleans
+        null
+        undefied
+        Symbols
+      Reference Values (=Object)
+        Everything that is not in primitive values
+        Are created with curly braces "{...}" (object literal)
+        Arrays are these kinds of values
+        DOM nodes
+        Other built-in objects
+____________________________________________________________________________________________________________________________________________
