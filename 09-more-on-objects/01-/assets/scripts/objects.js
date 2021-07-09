@@ -1,8 +1,17 @@
+const movieList = document.getElementById('movie-list');
+
+// way to get to change styles using the css names.
+movieList.style['background-color'] = 'red';
+movieList.style.display = 'block';
+
 // Creating an object
 // creating an object as a const you can not change the object
 
 let person = {
-  name: 'Josh',
+  // objects can have strings as key but causes problems
+  // you normally cant acces this using person.first name
+  // you can access that with person['first name']
+  'first-name': 'Josh',
   age: 30,
   hobbies: ['Sports', 'Cooking'],
   // functions in objects are called methods
