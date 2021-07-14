@@ -17,8 +17,15 @@ const renderMovies = () => {
 
   movies.forEach(movie => {
     const movieEl = document.createElement('li');
+    let text = `${movie.info.title} - `;
 
-    movieEl.textContent = movie.info.title;
+    for (const key in movie.info) {
+      if (key !== 'title') {
+        text += `${key}: ${movie.info[key]}`;
+      }
+    }
+    movieEl.textContent = text;
+    // movieEl.textContent = `${movie.info.title} - ${movie.info[extraName]}`;
     movieList.append(movieEl);
   });
 };
