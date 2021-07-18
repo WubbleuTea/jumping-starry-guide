@@ -22,9 +22,10 @@ const renderMovies = (filter = '') => {
   filteredMovies.forEach(movie => {
     const movieEl = document.createElement('li');
     const { info, ...otherProps } = movie;
-    // const {getFormattedTitle} = movie
+    let { getFormattedTitle } = movie;
+    getFormattedTitle = getFormattedTitle.bind(movie);
     // const { title: movieTitle } = info;
-    let text = `${movie.getFormattedTitle()} - `;
+    let text = `${getFormattedTitle()} - `;
     console.log(otherProps);
     for (const key in info) {
       if (key !== 'title') {
