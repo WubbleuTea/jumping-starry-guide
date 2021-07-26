@@ -20,3 +20,17 @@ CLASSES AND INSTANCES
 
     CLASS-based creation is an alternative to using object literals!
 ____________________________________________________________________________________________________________________________________________
+
+CLASS FIELDS (VS PROPERTIES)
+
+class Product { 
+  category = ‘DEFAULT’; - (PUBLIC Class Field)
+  constructor(title) { 
+    this.title = title; - (PUBLIC Class Property)
+  } 
+  printInfo() { 
+    console.log(this.title, this.category); 
+  } - (PUBLIC Class Method)
+}
+
+____________________________________________________________________________________________________________________________________________
