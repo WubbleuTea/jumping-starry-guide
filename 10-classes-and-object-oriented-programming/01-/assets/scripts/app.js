@@ -94,8 +94,8 @@ class ProductList {
 class Shop {
   render() {
     const renderHook = document.getElementById('app');
-    const cart = new ShoppingCart();
-    const cartEl = cart.render();
+    this.cart = new ShoppingCart();
+    const cartEl = this.cart.render();
     const productList = new ProductList();
     const prodListEl = productList.render();
     renderHook.append(cartEl);
@@ -103,5 +103,16 @@ class Shop {
   }
 }
 
-const shop = new Shop();
-shop.render();
+class App {
+  static init() {
+    const shop = new Shop();
+    this.cart = shop.cart;
+    shop.render();
+  }
+
+  static addProductToCart(product) {
+    this.cart.addProduct(product);
+  }
+}
+
+App.init();

@@ -34,3 +34,17 @@ class Product {
 }
 
 ____________________________________________________________________________________________________________________________________________
+
+STATIC PROPERTIES, FIELDS, AND METHODS 
+
+Static Field / Property / Method
+  Defined with static keyword
+  only accessible on class itself, without instantation (i.e. not on instance)
+  Typically used in helper classes, global configuration, etc.
+
+
+Instance Field / Property / Method
+  Defined WITHOUT static keyword.
+  Only accessible on instances (= objects) based on class
+  Used for core, re-usable logic
+____________________________________________________________________________________________________________________________________________
