@@ -17,7 +17,7 @@ class ShoppingCart {
 
   addProduct(product) {
     this.items.push(product);
-    this.totalOutput = `<h2>Total \$${1}</h2>`;
+    this.totalOutput.innerHTML = `<h2>Total \$${1}</h2>`;
   }
 
   render() {
@@ -38,7 +38,7 @@ class ProductItem {
   }
 
   addToCart() {
-    console.log('clicked', this.product);
+    App.addProductToCart(this.product);
   }
 
   render() {
@@ -104,10 +104,11 @@ class Shop {
 }
 
 class App {
+  static cart;
   static init() {
     const shop = new Shop();
-    this.cart = shop.cart;
     shop.render();
+    this.cart = shop.cart;
   }
 
   static addProductToCart(product) {
