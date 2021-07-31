@@ -48,3 +48,13 @@ Instance Field / Property / Method
   Only accessible on instances (= objects) based on class
   Used for core, re-usable logic
 ____________________________________________________________________________________________________________________________________________
+
+WHEN TO USE CLASSES
+
+Are obect literals ({}) obsolete? NO!
+  Great for genereal data grouping, objects which you only create once.
+  Quick and easy to create, no overhead.
+But also consider classes.
+  Great when you re-create the same type of object over and over again
+  More overhead initially but easy "object duplication" thereafter.
+____________________________________________________________________________________________________________________________________________
