@@ -58,3 +58,11 @@ But also consider classes.
   Great when you re-create the same type of object over and over again
   More overhead initially but easy "object duplication" thereafter.
 ____________________________________________________________________________________________________________________________________________
+
+INHERITANCE
+
+Usually has a base class that then shares with other classes and can be added to.
+Used to extend the base class.
+
+____________________________________________________________________________________________________________________________________________
+
