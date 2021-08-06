@@ -20,9 +20,11 @@ class ElementAttribute {
 }
 
 class Component {
-  constructor(renderHookId) {
+  constructor(renderHookId, shouldRender = true) {
     this.hookId = renderHookId;
-    this.render();
+    if (shouldRender) {
+      this.render();
+    }
   }
 
   render() {}
@@ -82,8 +84,9 @@ class ShoppingCart extends Component {
 
 class ProductItem extends Component {
   constructor(product, renderHookId) {
-    super(renderHookId);
+    super(renderHookId, false);
     this.product = product;
+    this.render();
   }
 
   addToCart() {
@@ -109,31 +112,41 @@ class ProductItem extends Component {
 }
 
 class ProductList extends Component {
-  products = [
-    new Product(
-      'A Pillow',
-      'https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1277&q=80',
-      'A soft pillow.',
-      19.99
-    ),
-    new Product(
-      'A Carpet',
-      'https://images.unsplash.com/photo-1600166898405-da9535204843?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FycGV0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1296&q=60',
-      'A nice carpet',
-      89.99
-    )
-  ];
-
+  products = [];
   constructor(renderHookId) {
     super(renderHookId);
+    this.fetchProducts();
   }
 
+  fetchProducts() {
+    this.products = [
+      new Product(
+        'A Pillow',
+        'https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1277&q=80',
+        'A soft pillow.',
+        19.99
+      ),
+      new Product(
+        'A Carpet',
+        'https://images.unsplash.com/photo-1600166898405-da9535204843?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FycGV0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1296&q=60',
+        'A nice carpet',
+        89.99
+      )
+    ];
+    this.renderProducts();
+  }
+
+  renderProducts() {
+    for (const prod of this.products) {
+      new ProductItem(prod, 'prod-list');
+    }
+  }
   render() {
     this.createRootElement('ul', 'product-list', [
       new ElementAttribute('id', 'prod-list')
     ]);
-    for (const prod of this.products) {
-      const productItem = new ProductItem(prod, 'prod-list');
+    if (this.products && this.products.length > 0) {
+      this.renderProducts();
     }
   }
 }
