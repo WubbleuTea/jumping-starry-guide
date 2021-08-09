@@ -66,3 +66,16 @@ Used to extend the base class.
 
 ____________________________________________________________________________________________________________________________________________
 
+PRIVATE FIELDS, PROPERTIES, AND METHODS
+
+PUBLIC
+  Accessible OUTSIDE of the class/object
+  the "Things" you work with in your other code
+
+
+PRIVATE
+  Accessible ONLY INSIDE of the class / object
+  The "things" you work with in your class only (to split & re-use code)
+  Example includes Hard-coding (fallback) values, re-used class specific logic
+
+____________________________________________________________________________________________________________________________________________
